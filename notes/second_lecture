@@ -1,0 +1,31 @@
+- Understand what the robot has done given a bag file 
+
+- Visualize: one day, one week, one month of information in a single page 
+- Input: bag file (ROS topics, )
+
+- Each node is sampling information at different rates
+
+- Graphic interface to generate plots
+- Monitor communication between two or more nodes at a given time
+- take bag file and create a timeline that shows graphically NODE BEHAVIOR
+- there can be N nodes 
+- scrolling options - GUI year/months 
+- TOOL: JavaScript, wxPython or ROS qrt (argue why using it)
+- GUI functionalities: user chooses which topics to use 
+
+- To start design of GUI, this is the extracted data
+
+	time/ topic / event
+	------------------
+
+- Requirements Handling:
+	* For now: create a normal excel sheet with requirements (high-level)
+	* Low-level requirements: github issues (at functional level)
+
+	* github issues / project boards
+	* CITRIX doors 
+	* Jira Software
+	+ Bugzilla
+
+- Requirements:
+	* Interactive GUI
