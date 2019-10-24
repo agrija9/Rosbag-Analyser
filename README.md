@@ -7,6 +7,7 @@ Material Related to the Software Development Project course at HBRS. Theory and 
 ##  Contributors 
 
 - Alan Preciado Grijalva
+- Ragith Ayyappan Kutty
 
 - Rest of team: Add your name and create a pull request
 
