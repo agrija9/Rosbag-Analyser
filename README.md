@@ -10,8 +10,6 @@ Material Related to the Software Development Project course at HBRS. Theory and 
 
 - Rest of team: Add your name and create a pull request
 
-## License
-
 ## Working with git 
 
 - git clone (address of repository)
@@ -19,3 +17,7 @@ Material Related to the Software Development Project course at HBRS. Theory and 
 - git add changes
 - git commit 
 - git push origin/master
+
+## License
+
+## Coding guidelines
