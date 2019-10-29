@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Material Related to the Software Development Project course at HBRS. Theory and Practice. 
+Material Related to the Software Development Project course at H-BRS. Theory and Practice. 
 
 ##  Contributors 
 
@@ -10,7 +10,7 @@ Material Related to the Software Development Project course at HBRS. Theory and 
 - Ragith Ayyappan Kutty
 - Devaiah Ulliyada Arun
 
-- Rest of team: Add your name and create a pull request
+- Shravanthi Arvind Patil 
 
 ## Working with git 
 
