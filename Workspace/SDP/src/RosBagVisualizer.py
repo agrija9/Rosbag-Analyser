@@ -1,7 +1,7 @@
 # RosBagVisualizer.py
 
 # TODO: Consider huge inputs from divin's class
-# TODO: Consider pipeline for reading and plottin timeseries
+# TODO: Consider pipeline for reading and plotting timeseries
 
 import matplotlib.pyplot as plt
 
