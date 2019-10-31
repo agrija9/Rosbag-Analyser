@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blackbox Visualizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <style>
+        .w3-lobster {
+            font-family: "Lobster", serif;
+        }
+        .w3-allerta {
+            font-family: "Allerta Stencil", Sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 
+    <div class="w3-container w3-black w3-center">
+        <p class="w3-xxxlarge  w3-lobster">Blackbox Visualizer</p>
+        <p class="w3-allerta w3-large">Analysis of ROS Bag File</p>
+    </div>
+
+    <input class="w3-button w3-black" type="button" value="Input Button">
+    <button class="w3-button w3-black">Button Button</button>
+    <a href="https://www.w3schools.com" class="w3-button w3-black">Link Button</a>
+
+    <ul class="w3-display-bottomleft w3-ul w3-card-4" style="width:50%">
+        <li>Jill</li>
+        <li>Eve</li>
+        <li>Adam</li>
+    </ul> -->
+
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:200px;" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button">Charts</a>
+    <a href="http://127.0.0.1:5000/contributors" class="w3-bar-item w3-button">Contributors</a>
+</div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <div class="w3-teal w3-black w3-center">
+        <!-- <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button> -->
+        <div class="w3-container">
+            <p class="w3-xxxlarge  w3-lobster">Blackbox Visualizer</p>
+            <p class="w3-allerta w3-large">Analysis of ROS Bag File</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
+
+
+
+</body>
+
+</html>
