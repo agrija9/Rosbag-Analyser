@@ -1,5 +1,0 @@
- ,/rosout,/turtle1/cmd_vel,/turtle1/color_sensor,/turtle1/pose
-Message,rosgraph_msgs/Log,geometry_msgs/Twist,turtlesim/Color,turtlesim/Pose
-Count,4,76,8979,8980
-Connections,2,1,1,1
-Frequency,54471.5,4.0,62.8,62.8
