@@ -9,3 +9,7 @@ Deebul observations:
 # debul: test cases in developments (unit test python framework)
 
 # testing frameworks: pytest, unit_test
+
+# Debul requests for next week: development, 
+								test cases,
+								travis build
