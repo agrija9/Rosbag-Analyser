@@ -1,0 +1,88 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  <div id="dashboard_div">
+        <div id="control_div" style="width: 100%; height: 100%"></div>
+        <div id="daily_container_count_lineChart" style="width: 100%; height: 100%"></div>
+    </div>
+        <div id="table_div"></div>
+    google.charts.load('current', {
+        callback: function () {
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'VIC - STH CRT');
+            data.addColumn('number', 'NSW - MINTO');
+            data.addColumn('number', 'QLD - PINKENBA');
+            data.addColumn('number', 'WA - HAZELMERE');
+
+            data.addRow([new Date('04/01/2001'), 3, 4, 7, 6]);
+            data.addRow([new Date('04/02/2001'), 0, 9, 8, 7]);
+            data.addRow([new Date('04/03/2001'), 9, 9, 0, 7]);
+            data.addRow([new Date('04/04/2001'), 5, 5, 5, 2]);
+            data.addRow([new Date('04/05/2001'), 6, 7, 1, 1]);
+            data.addRow([new Date('04/06/2001'), 4, 4, 1, 9]);
+            data.addRow([new Date('04/07/2001'), 4, 5, 9, 0]);
+
+            var dataOther = new google.visualization.DataTable();
+            dataOther.addColumn('date', 'Date');
+            dataOther.addColumn('number', 'HLS - FLORENCE');
+            dataOther.addColumn('number', 'FGT - GAY');
+            dataOther.addColumn('number', 'KNX - FULTON');
+            dataOther.addColumn('number', 'TN - VOLS');
+
+            dataOther.addRow([new Date('04/01/2001'), 1, 8, 5, 2]);
+            dataOther.addRow([new Date('04/02/2001'), 2, 9, 6, 3]);
+            dataOther.addRow([new Date('04/03/2001'), 3, 0, 7, 4]);
+            dataOther.addRow([new Date('04/04/2001'), 4, 1, 8, 5]);
+            dataOther.addRow([new Date('04/05/2001'), 5, 2, 9, 6]);
+            dataOther.addRow([new Date('04/06/2001'), 6, 3, 0, 7]);
+            dataOther.addRow([new Date('04/07/2001'), 7, 4, 1, 8]);
+
+            var chart = new google.visualization.ChartWrapper({
+                chartType: 'LineChart',
+                containerId: 'daily_container_count_lineChart',
+                options: {
+                    theme: 'maximized'
+                }
+            });
+
+            var control = new google.visualization.ControlWrapper({
+                controlType: 'ChartRangeFilter',
+                containerId: 'control_div',
+                options: {
+                    filterColumnIndex: 0
+                }
+            });
+
+            var table = new google.visualization.ChartWrapper({
+                chartType: 'Table',
+                containerId: 'table_div',
+                dataTable: dataOther,
+                options: {
+                    sortColumn: 1
+                }
+            });
+
+            google.visualization.events.addListener(control, 'statechange', function () {
+                var state = control.getState();
+                var view = new google.visualization.DataView(dataOther);
+                view.setRows(view.getFilteredRows([{ column: 0, minValue: state.range.start, maxValue: state.range.end }]));
+                table.setDataTable(view);
+                table.draw();
+            });
+
+            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+            dashboard.bind([control], [chart]);
+            dashboard.draw(data);
+            table.draw();
+        },
+        packages: ['controls', 'corechart', 'table']
+    });
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
