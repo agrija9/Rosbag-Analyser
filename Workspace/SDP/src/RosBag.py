@@ -16,8 +16,8 @@ def read_message(msg):
         print(i + ' : ' + str(getattr(msg, i)))
 
 def bag_info(bag):
-    Start_Time = convert_time(bag.get_start_time())
-    End_Time = convert_time(bag.get_end_time())
+    Start_Time = convert_time(bag.get_start_time(), (bag.get_start_time() - int(bag.get_start_time()))*10**9)
+    End_Time = convert_time(bag.get_end_time(), (bag.get_end_time() - int(bag.get_end_time()))*10**9)
     Messages = bag.get_type_and_topic_info()[0].keys()
     Topics = bag.get_type_and_topic_info()[1].keys()
     msgs = [bag.get_type_and_topic_info()[1].get(i) for i in bag.get_type_and_topic_info()[1].keys()]
@@ -27,37 +27,37 @@ def bag_info(bag):
     print('Topics : ' + str(Topics))
     print('--------------------------------------------------------------------')
     print('Topics and Messages :')
+    df1 = pd.DataFrame(columns = ['Topic', 'Message', 'Count', 'Connections', 'Frequency'])
 
-    df = pd.DataFrame(columns=Topics)
-    data = dict()
-    data[' '] = ['Message', 'Count', 'Connections', 'Frequency']
+
     for idx, j in enumerate(Topics):
         print('\n')
         print('Topic : ' + str(j))
         print('Message : ' + str(msgs[idx].msg_type))
         print('Count : ' + str(msgs[idx].message_count))
         print('Connections : ' + str(msgs[idx].connections))
-        print('Frequency : ' + str(round(msgs[idx].frequency, 1)) + ' Hz')
-        data[j] = [msgs[idx].msg_type, msgs[idx].message_count, msgs[idx].connections, round(msgs[idx].frequency, 1)]
-        
-    df1 = pd.DataFrame(data)
-    df = df.append(df1, ignore_index = True) 
-    df.to_csv('Rosbag_info.csv', index=True)
+        print('Frequency : ' + str(msgs[idx].frequency) + ' Hz')
+        df1 = df1.append({'Topic' : j, 'Message' : msgs[idx].msg_type, 'Count' : msgs[idx].message_count, 'Connections' : msgs[idx].connections, 'Frequency' : msgs[idx].frequency}, ignore_index=True)
+
+    df1 = df1.set_index('Topic')
+    df1.to_csv('Rosbag_Info.csv', index=True)
 
 def bag_content(bag):
-    df1 = pd.DataFrame(columns = ['Time', 'Topic'])
+    df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message'])
 
     for Topic, Msg, T in bag.read_messages(topics = bag.get_type_and_topic_info()[1].keys()):
         Time = convert_time(T.secs, T.nsecs)
-        df1 = df1.append({'Topic' : Topic , 'Time' : Time} , ignore_index=True)
+        # print(Msg)
+        try:
+            df1 = df1.append({'Topic' : Topic , 'Time' : Time, 'Message' : Msg.msg} , ignore_index=True)
+        except:
+            df1 = df1.append({'Topic' : Topic , 'Time' : Time, 'Message' : None} , ignore_index=True)
 
     df1 = df1.set_index('Time')
     df1.to_csv('Rosbag_Content.csv', index=True)
-    print(df1)
 
 
-bag = rosbag.Bag(bag_names[0])
-
+bag = rosbag.Bag(bag_names[2])
 print('--------------------------------------------------------------------')
 # bag_info(bag)
 bag_content(bag)
