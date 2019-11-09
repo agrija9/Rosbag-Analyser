@@ -1,0 +1,1056 @@
+body,
+input {
+font: 12pt verdana;
+}
+
+.box {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+}
+
+/* custom styles for i: ;ndividual items, load this after vis-timeline-graph2d.min.css/vis-timeline-graph2d.min.css */
+.vis-item.aliceblue{
+  background-color: aliceblue;
+  border-color: aliceblue;
+  color: white;
+}
+
+
+.vis-item.antiquewhite{
+  background-color: antiquewhite;
+  border-color: antiquewhite;
+  color: white;
+}
+
+
+.vis-item.aqua{
+  background-color: aqua;
+  border-color: aqua;
+  color: white;
+}
+
+
+.vis-item.aquamarine{
+  background-color: aquamarine;
+  border-color: aquamarine;
+  color: white;
+}
+
+
+.vis-item.azure{
+  background-color: azure;
+  border-color: azure;
+  color: white;
+}
+
+
+.vis-item.beige{
+  background-color: beige;
+  border-color: beige;
+  color: white;
+}
+
+
+.vis-item.bisque{
+  background-color: bisque;
+  border-color: bisque;
+  color: white;
+}
+
+
+.vis-item.black{
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+
+.vis-item.blanchedalmond{
+  background-color: blanchedalmond;
+  border-color: blanchedalmond;
+  color: white;
+}
+
+
+.vis-item.blue{
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
+
+
+.vis-item.blueviolet{
+  background-color: blueviolet;
+  border-color: blueviolet;
+  color: white;
+}
+
+
+.vis-item.brown{
+  background-color: brown;
+  border-color: brown;
+  color: white;
+}
+
+
+.vis-item.burlywood{
+  background-color: burlywood;
+  border-color: burlywood;
+  color: white;
+}
+
+
+.vis-item.cadetblue{
+  background-color: cadetblue;
+  border-color: cadetblue;
+  color: white;
+}
+
+
+.vis-item.chartreuse{
+  background-color: chartreuse;
+  border-color: chartreuse;
+  color: white;
+}
+
+
+.vis-item.chocolate{
+  background-color: chocolate;
+  border-color: chocolate;
+  color: white;
+}
+
+
+.vis-item.coral{
+  background-color: coral;
+  border-color: coral;
+  color: white;
+}
+
+
+.vis-item.cornflowerblue{
+  background-color: cornflowerblue;
+  border-color: cornflowerblue;
+  color: white;
+}
+
+
+.vis-item.cornsilk{
+  background-color: cornsilk;
+  border-color: cornsilk;
+  color: white;
+}
+
+
+.vis-item.crimson{
+  background-color: crimson;
+  border-color: crimson;
+  color: white;
+}
+
+
+.vis-item.cyan{
+  background-color: cyan;
+  border-color: cyan;
+  color: white;
+}
+
+
+.vis-item.darkblue{
+  background-color: darkblue;
+  border-color: darkblue;
+  color: white;
+}
+
+
+.vis-item.darkcyan{
+  background-color: darkcyan;
+  border-color: darkcyan;
+  color: white;
+}
+
+
+.vis-item.darkgoldenrod{
+  background-color: darkgoldenrod;
+  border-color: darkgoldenrod;
+  color: white;
+}
+
+
+.vis-item.darkgray{
+  background-color: darkgray;
+  border-color: darkgray;
+  color: white;
+}
+
+
+.vis-item.darkgrey{
+  background-color: darkgrey;
+  border-color: darkgrey;
+  color: white;
+}
+
+
+.vis-item.darkgreen{
+  background-color: darkgreen;
+  border-color: darkgreen;
+  color: white;
+}
+
+
+.vis-item.darkkhaki{
+  background-color: darkkhaki;
+  border-color: darkkhaki;
+  color: white;
+}
+
+
+.vis-item.darkmagenta{
+  background-color: darkmagenta;
+  border-color: darkmagenta;
+  color: white;
+}
+
+
+.vis-item.darkolivegreen{
+  background-color: darkolivegreen;
+  border-color: darkolivegreen;
+  color: white;
+}
+
+
+.vis-item.darkorange{
+  background-color: darkorange;
+  border-color: darkorange;
+  color: white;
+}
+
+
+.vis-item.darkorchid{
+  background-color: darkorchid;
+  border-color: darkorchid;
+  color: white;
+}
+
+
+.vis-item.darkred{
+  background-color: darkred;
+  border-color: darkred;
+  color: white;
+}
+
+
+.vis-item.darksalmon{
+  background-color: darksalmon;
+  border-color: darksalmon;
+  color: white;
+}
+
+
+.vis-item.darkseagreen{
+  background-color: darkseagreen;
+  border-color: darkseagreen;
+  color: white;
+}
+
+
+.vis-item.darkslateblue{
+  background-color: darkslateblue;
+  border-color: darkslateblue;
+  color: white;
+}
+
+
+.vis-item.darkslategray{
+  background-color: darkslategray;
+  border-color: darkslategray;
+  color: white;
+}
+
+
+.vis-item.darkslategrey{
+  background-color: darkslategrey;
+  border-color: darkslategrey;
+  color: white;
+}
+
+
+.vis-item.darkturquoise{
+  background-color: darkturquoise;
+  border-color: darkturquoise;
+  color: white;
+}
+
+
+.vis-item.darkviolet{
+  background-color: darkviolet;
+  border-color: darkviolet;
+  color: white;
+}
+
+
+.vis-item.deeppink{
+  background-color: deeppink;
+  border-color: deeppink;
+  color: white;
+}
+
+
+.vis-item.deepskyblue{
+  background-color: deepskyblue;
+  border-color: deepskyblue;
+  color: white;
+}
+
+
+.vis-item.dimgray{
+  background-color: dimgray;
+  border-color: dimgray;
+  color: white;
+}
+
+
+.vis-item.dimgrey{
+  background-color: dimgrey;
+  border-color: dimgrey;
+  color: white;
+}
+
+
+.vis-item.dodgerblue{
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  color: white;
+}
+
+
+.vis-item.firebrick{
+  background-color: firebrick;
+  border-color: firebrick;
+  color: white;
+}
+
+
+.vis-item.floralwhite{
+  background-color: floralwhite;
+  border-color: floralwhite;
+  color: white;
+}
+
+
+.vis-item.forestgreen{
+  background-color: forestgreen;
+  border-color: forestgreen;
+  color: white;
+}
+
+
+.vis-item.fuchsia{
+  background-color: fuchsia;
+  border-color: fuchsia;
+  color: white;
+}
+
+
+.vis-item.gainsboro{
+  background-color: gainsboro;
+  border-color: gainsboro;
+  color: white;
+}
+
+
+.vis-item.ghostwhite{
+  background-color: ghostwhite;
+  border-color: ghostwhite;
+  color: white;
+}
+
+
+.vis-item.gold{
+  background-color: gold;
+  border-color: gold;
+  color: white;
+}
+
+
+.vis-item.goldenrod{
+  background-color: goldenrod;
+  border-color: goldenrod;
+  color: white;
+}
+
+
+.vis-item.gray{
+  background-color: gray;
+  border-color: gray;
+  color: white;
+}
+
+
+.vis-item.grey{
+  background-color: grey;
+  border-color: grey;
+  color: white;
+}
+
+
+.vis-item.green{
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+
+
+.vis-item.greenyellow{
+  background-color: greenyellow;
+  border-color: greenyellow;
+  color: white;
+}
+
+
+.vis-item.honeydew{
+  background-color: honeydew;
+  border-color: honeydew;
+  color: white;
+}
+
+
+.vis-item.hotpink{
+  background-color: hotpink;
+  border-color: hotpink;
+  color: white;
+}
+
+
+.vis-item.indianred{
+  background-color: indianred;
+  border-color: indianred;
+  color: white;
+}
+
+
+.vis-item.indigo{
+  background-color: indigo;
+  border-color: indigo;
+  color: white;
+}
+
+
+.vis-item.ivory{
+  background-color: ivory;
+  border-color: ivory;
+  color: white;
+}
+
+
+.vis-item.khaki{
+  background-color: khaki;
+  border-color: khaki;
+  color: white;
+}
+
+
+.vis-item.lavender{
+  background-color: lavender;
+  border-color: lavender;
+  color: white;
+}
+
+
+.vis-item.lavenderblush{
+  background-color: lavenderblush;
+  border-color: lavenderblush;
+  color: white;
+}
+
+
+.vis-item.lawngreen{
+  background-color: lawngreen;
+  border-color: lawngreen;
+  color: white;
+}
+
+
+.vis-item.lemonchiffon{
+  background-color: lemonchiffon;
+  border-color: lemonchiffon;
+  color: white;
+}
+
+
+.vis-item.lightblue{
+  background-color: lightblue;
+  border-color: lightblue;
+  color: white;
+}
+
+
+.vis-item.lightcoral{
+  background-color: lightcoral;
+  border-color: lightcoral;
+  color: white;
+}
+
+
+.vis-item.lightcyan{
+  background-color: lightcyan;
+  border-color: lightcyan;
+  color: white;
+}
+
+
+.vis-item.lightgoldenrodyellow{
+  background-color: lightgoldenrodyellow;
+  border-color: lightgoldenrodyellow;
+  color: white;
+}
+
+
+.vis-item.lightgray{
+  background-color: lightgray;
+  border-color: lightgray;
+  color: white;
+}
+
+
+.vis-item.lightgrey{
+  background-color: lightgrey;
+  border-color: lightgrey;
+  color: white;
+}
+
+
+.vis-item.lightgreen{
+  background-color: lightgreen;
+  border-color: lightgreen;
+  color: white;
+}
+
+
+.vis-item.lightpink{
+  background-color: lightpink;
+  border-color: lightpink;
+  color: white;
+}
+
+
+.vis-item.lightsalmon{
+  background-color: lightsalmon;
+  border-color: lightsalmon;
+  color: white;
+}
+
+
+.vis-item.lightseagreen{
+  background-color: lightseagreen;
+  border-color: lightseagreen;
+  color: white;
+}
+
+
+.vis-item.lightskyblue{
+  background-color: lightskyblue;
+  border-color: lightskyblue;
+  color: white;
+}
+
+
+.vis-item.lightslategray{
+  background-color: lightslategray;
+  border-color: lightslategray;
+  color: white;
+}
+
+
+.vis-item.lightslategrey{
+  background-color: lightslategrey;
+  border-color: lightslategrey;
+  color: white;
+}
+
+
+.vis-item.lightsteelblue{
+  background-color: lightsteelblue;
+  border-color: lightsteelblue;
+  color: white;
+}
+
+
+.vis-item.lightyellow{
+  background-color: lightyellow;
+  border-color: lightyellow;
+  color: white;
+}
+
+
+.vis-item.lime{
+  background-color: lime;
+  border-color: lime;
+  color: white;
+}
+
+
+.vis-item.limegreen{
+  background-color: limegreen;
+  border-color: limegreen;
+  color: white;
+}
+
+
+.vis-item.linen{
+  background-color: linen;
+  border-color: linen;
+  color: white;
+}
+
+
+.vis-item.magenta{
+  background-color: magenta;
+  border-color: magenta;
+  color: white;
+}
+
+
+.vis-item.maroon{
+  background-color: maroon;
+  border-color: maroon;
+  color: white;
+}
+
+
+.vis-item.mediumaquamarine{
+  background-color: mediumaquamarine;
+  border-color: mediumaquamarine;
+  color: white;
+}
+
+
+.vis-item.mediumblue{
+  background-color: mediumblue;
+  border-color: mediumblue;
+  color: white;
+}
+
+
+.vis-item.mediumorchid{
+  background-color: mediumorchid;
+  border-color: mediumorchid;
+  color: white;
+}
+
+
+.vis-item.mediumpurple{
+  background-color: mediumpurple;
+  border-color: mediumpurple;
+  color: white;
+}
+
+
+.vis-item.mediumseagreen{
+  background-color: mediumseagreen;
+  border-color: mediumseagreen;
+  color: white;
+}
+
+
+.vis-item.mediumslateblue{
+  background-color: mediumslateblue;
+  border-color: mediumslateblue;
+  color: white;
+}
+
+
+.vis-item.mediumspringgreen{
+  background-color: mediumspringgreen;
+  border-color: mediumspringgreen;
+  color: white;
+}
+
+
+.vis-item.mediumturquoise{
+  background-color: mediumturquoise;
+  border-color: mediumturquoise;
+  color: white;
+}
+
+
+.vis-item.mediumvioletred{
+  background-color: mediumvioletred;
+  border-color: mediumvioletred;
+  color: white;
+}
+
+
+.vis-item.midnightblue{
+  background-color: midnightblue;
+  border-color: midnightblue;
+  color: white;
+}
+
+
+.vis-item.mintcream{
+  background-color: mintcream;
+  border-color: mintcream;
+  color: white;
+}
+
+
+.vis-item.mistyrose{
+  background-color: mistyrose;
+  border-color: mistyrose;
+  color: white;
+}
+
+
+.vis-item.moccasin{
+  background-color: moccasin;
+  border-color: moccasin;
+  color: white;
+}
+
+
+.vis-item.navajowhite{
+  background-color: navajowhite;
+  border-color: navajowhite;
+  color: white;
+}
+
+
+.vis-item.navy{
+  background-color: navy;
+  border-color: navy;
+  color: white;
+}
+
+
+.vis-item.oldlace{
+  background-color: oldlace;
+  border-color: oldlace;
+  color: white;
+}
+
+
+.vis-item.olive{
+  background-color: olive;
+  border-color: olive;
+  color: white;
+}
+
+
+.vis-item.olivedrab{
+  background-color: olivedrab;
+  border-color: olivedrab;
+  color: white;
+}
+
+
+.vis-item.orange{
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+
+.vis-item.orangered{
+  background-color: orangered;
+  border-color: orangered;
+  color: white;
+}
+
+
+.vis-item.orchid{
+  background-color: orchid;
+  border-color: orchid;
+  color: white;
+}
+
+
+.vis-item.palegoldenrod{
+  background-color: palegoldenrod;
+  border-color: palegoldenrod;
+  color: white;
+}
+
+
+.vis-item.palegreen{
+  background-color: palegreen;
+  border-color: palegreen;
+  color: white;
+}
+
+
+.vis-item.paleturquoise{
+  background-color: paleturquoise;
+  border-color: paleturquoise;
+  color: white;
+}
+
+
+.vis-item.palevioletred{
+  background-color: palevioletred;
+  border-color: palevioletred;
+  color: white;
+}
+
+
+.vis-item.papayawhip{
+  background-color: papayawhip;
+  border-color: papayawhip;
+  color: white;
+}
+
+
+.vis-item.peachpuff{
+  background-color: peachpuff;
+  border-color: peachpuff;
+  color: white;
+}
+
+
+.vis-item.peru{
+  background-color: peru;
+  border-color: peru;
+  color: white;
+}
+
+
+.vis-item.pink{
+  background-color: pink;
+  border-color: pink;
+  color: white;
+}
+
+
+.vis-item.plum{
+  background-color: plum;
+  border-color: plum;
+  color: white;
+}
+
+
+.vis-item.powderblue{
+  background-color: powderblue;
+  border-color: powderblue;
+  color: white;
+}
+
+
+.vis-item.purple{
+  background-color: purple;
+  border-color: purple;
+  color: white;
+}
+
+
+.vis-item.rebeccapurple{
+  background-color: rebeccapurple;
+  border-color: rebeccapurple;
+  color: white;
+}
+
+
+.vis-item.red{
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+
+.vis-item.rosybrown{
+  background-color: rosybrown;
+  border-color: rosybrown;
+  color: white;
+}
+
+
+.vis-item.royalblue{
+  background-color: royalblue;
+  border-color: royalblue;
+  color: white;
+}
+
+
+.vis-item.saddlebrown{
+  background-color: saddlebrown;
+  border-color: saddlebrown;
+  color: white;
+}
+
+
+.vis-item.salmon{
+  background-color: salmon;
+  border-color: salmon;
+  color: white;
+}
+
+
+.vis-item.sandybrown{
+  background-color: sandybrown;
+  border-color: sandybrown;
+  color: white;
+}
+
+
+.vis-item.seagreen{
+  background-color: seagreen;
+  border-color: seagreen;
+  color: white;
+}
+
+
+.vis-item.seashell{
+  background-color: seashell;
+  border-color: seashell;
+  color: white;
+}
+
+
+.vis-item.sienna{
+  background-color: sienna;
+  border-color: sienna;
+  color: white;
+}
+
+
+.vis-item.silver{
+  background-color: silver;
+  border-color: silver;
+  color: white;
+}
+
+
+.vis-item.skyblue{
+  background-color: skyblue;
+  border-color: skyblue;
+  color: white;
+}
+
+
+.vis-item.slateblue{
+  background-color: slateblue;
+  border-color: slateblue;
+  color: white;
+}
+
+
+.vis-item.slategray{
+  background-color: slategray;
+  border-color: slategray;
+  color: white;
+}
+
+
+.vis-item.slategrey{
+  background-color: slategrey;
+  border-color: slategrey;
+  color: white;
+}
+
+
+.vis-item.snow{
+  background-color: snow;
+  border-color: snow;
+  color: white;
+}
+
+
+.vis-item.springgreen{
+  background-color: springgreen;
+  border-color: springgreen;
+  color: white;
+}
+
+
+.vis-item.steelblue{
+  background-color: steelblue;
+  border-color: steelblue;
+  color: white;
+}
+
+
+.vis-item.tan{
+  background-color: tan;
+  border-color: tan;
+  color: white;
+}
+
+
+.vis-item.teal{
+  background-color: teal;
+  border-color: teal;
+  color: white;
+}
+
+
+.vis-item.thistle{
+  background-color: thistle;
+  border-color: thistle;
+  color: white;
+}
+
+
+.vis-item.tomato{
+  background-color: tomato;
+  border-color: tomato;
+  color: white;
+}
+
+
+.vis-item.turquoise{
+  background-color: turquoise;
+  border-color: turquoise;
+  color: white;
+}
+
+
+.vis-item.violet{
+  background-color: violet;
+  border-color: violet;
+  color: white;
+}
+
+
+.vis-item.wheat{
+  background-color: wheat;
+  border-color: wheat;
+  color: white;
+}
+
+
+.vis-item.white{
+  background-color: white;
+  border-color: white;
+  color: white;
+}
+
+
+.vis-item.whitesmoke{
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  color: white;
+}
+
+
+.vis-item.yellow{
+  background-color: yellow;
+  border-color: yellow;
+  color: white;
+}
+
+
+.vis-item.yellowgreen{
+  background-color: yellowgreen;
+  border-color: yellowgreen;
+  color: white;
+}
+
+/* our custom classes overrule the styles for selected events,
+    so lets define a new style for the selected events */
+.vis-item.vis-selected {
+  background-color: white;
+  border-color: black;
+  color: black;
+  box-shadow: 0 0 10px gray;
+}

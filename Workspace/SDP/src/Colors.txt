@@ -1,0 +1,1 @@
+green, red, black, darkblue, orange, magenta, indianred, khaki, lightseagreen, mediumaquamarine, mediumvioletred, orchid, saddlebrown, salmon, springgreen, tomato, violet, silver, peru, chocolate, darkgrey, deepskyblue, forestgreen, dodgerblue, maroon, teal, rebeccapurple, pink, hotpink, indigo.
