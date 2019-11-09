@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Bar charts with Bokeh </title>
+		<link href="http://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.css" rel="stylesheet">
+    	<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.4.0.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1> Bugs found over the past {{ bars_count }} days </h1>
+		{{ the_div|safe }}
+		<script src="http://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
+    	<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.4.0.min.js"></script>
+    	{{ the_script|safe }}
+	</body>
+</html>
