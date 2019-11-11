@@ -3,6 +3,18 @@ input {
 font: 12pt verdana;
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .box {
   display: inline-block;
   height: 20px;
@@ -13,49 +25,49 @@ font: 12pt verdana;
 /* custom styles for i: ;ndividual items, load this after vis-timeline-graph2d.min.css/vis-timeline-graph2d.min.css */
 .vis-item.aliceblue{
   background-color: aliceblue;
-  border-color: aliceblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.antiquewhite{
   background-color: antiquewhite;
-  border-color: antiquewhite;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.aqua{
   background-color: aqua;
-  border-color: aqua;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.aquamarine{
   background-color: aquamarine;
-  border-color: aquamarine;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.azure{
   background-color: azure;
-  border-color: azure;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.beige{
   background-color: beige;
-  border-color: beige;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.bisque{
   background-color: bisque;
-  border-color: bisque;
+  border-color: black;
   color: white;
 }
 
@@ -69,980 +81,980 @@ font: 12pt verdana;
 
 .vis-item.blanchedalmond{
   background-color: blanchedalmond;
-  border-color: blanchedalmond;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.blue{
   background-color: blue;
-  border-color: blue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.blueviolet{
   background-color: blueviolet;
-  border-color: blueviolet;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.brown{
   background-color: brown;
-  border-color: brown;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.burlywood{
   background-color: burlywood;
-  border-color: burlywood;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.cadetblue{
   background-color: cadetblue;
-  border-color: cadetblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.chartreuse{
   background-color: chartreuse;
-  border-color: chartreuse;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.chocolate{
   background-color: chocolate;
-  border-color: chocolate;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.coral{
   background-color: coral;
-  border-color: coral;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.cornflowerblue{
   background-color: cornflowerblue;
-  border-color: cornflowerblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.cornsilk{
   background-color: cornsilk;
-  border-color: cornsilk;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.crimson{
   background-color: crimson;
-  border-color: crimson;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.cyan{
   background-color: cyan;
-  border-color: cyan;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkblue{
   background-color: darkblue;
-  border-color: darkblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkcyan{
   background-color: darkcyan;
-  border-color: darkcyan;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkgoldenrod{
   background-color: darkgoldenrod;
-  border-color: darkgoldenrod;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkgray{
   background-color: darkgray;
-  border-color: darkgray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkgrey{
   background-color: darkgrey;
-  border-color: darkgrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkgreen{
   background-color: darkgreen;
-  border-color: darkgreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkkhaki{
   background-color: darkkhaki;
-  border-color: darkkhaki;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkmagenta{
   background-color: darkmagenta;
-  border-color: darkmagenta;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkolivegreen{
   background-color: darkolivegreen;
-  border-color: darkolivegreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkorange{
   background-color: darkorange;
-  border-color: darkorange;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkorchid{
   background-color: darkorchid;
-  border-color: darkorchid;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkred{
   background-color: darkred;
-  border-color: darkred;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darksalmon{
   background-color: darksalmon;
-  border-color: darksalmon;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkseagreen{
   background-color: darkseagreen;
-  border-color: darkseagreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkslateblue{
   background-color: darkslateblue;
-  border-color: darkslateblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkslategray{
   background-color: darkslategray;
-  border-color: darkslategray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkslategrey{
   background-color: darkslategrey;
-  border-color: darkslategrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkturquoise{
   background-color: darkturquoise;
-  border-color: darkturquoise;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.darkviolet{
   background-color: darkviolet;
-  border-color: darkviolet;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.deeppink{
   background-color: deeppink;
-  border-color: deeppink;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.deepskyblue{
   background-color: deepskyblue;
-  border-color: deepskyblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.dimgray{
   background-color: dimgray;
-  border-color: dimgray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.dimgrey{
   background-color: dimgrey;
-  border-color: dimgrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.dodgerblue{
   background-color: dodgerblue;
-  border-color: dodgerblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.firebrick{
   background-color: firebrick;
-  border-color: firebrick;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.floralwhite{
   background-color: floralwhite;
-  border-color: floralwhite;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.forestgreen{
   background-color: forestgreen;
-  border-color: forestgreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.fuchsia{
   background-color: fuchsia;
-  border-color: fuchsia;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.gainsboro{
   background-color: gainsboro;
-  border-color: gainsboro;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.ghostwhite{
   background-color: ghostwhite;
-  border-color: ghostwhite;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.gold{
   background-color: gold;
-  border-color: gold;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.goldenrod{
   background-color: goldenrod;
-  border-color: goldenrod;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.gray{
   background-color: gray;
-  border-color: gray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.grey{
   background-color: grey;
-  border-color: grey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.green{
   background-color: green;
-  border-color: green;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.greenyellow{
   background-color: greenyellow;
-  border-color: greenyellow;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.honeydew{
   background-color: honeydew;
-  border-color: honeydew;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.hotpink{
   background-color: hotpink;
-  border-color: hotpink;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.indianred{
   background-color: indianred;
-  border-color: indianred;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.indigo{
   background-color: indigo;
-  border-color: indigo;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.ivory{
   background-color: ivory;
-  border-color: ivory;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.khaki{
   background-color: khaki;
-  border-color: khaki;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lavender{
   background-color: lavender;
-  border-color: lavender;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lavenderblush{
   background-color: lavenderblush;
-  border-color: lavenderblush;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lawngreen{
   background-color: lawngreen;
-  border-color: lawngreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lemonchiffon{
   background-color: lemonchiffon;
-  border-color: lemonchiffon;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightblue{
   background-color: lightblue;
-  border-color: lightblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightcoral{
   background-color: lightcoral;
-  border-color: lightcoral;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightcyan{
   background-color: lightcyan;
-  border-color: lightcyan;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightgoldenrodyellow{
   background-color: lightgoldenrodyellow;
-  border-color: lightgoldenrodyellow;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightgray{
   background-color: lightgray;
-  border-color: lightgray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightgrey{
   background-color: lightgrey;
-  border-color: lightgrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightgreen{
   background-color: lightgreen;
-  border-color: lightgreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightpink{
   background-color: lightpink;
-  border-color: lightpink;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightsalmon{
   background-color: lightsalmon;
-  border-color: lightsalmon;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightseagreen{
   background-color: lightseagreen;
-  border-color: lightseagreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightskyblue{
   background-color: lightskyblue;
-  border-color: lightskyblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightslategray{
   background-color: lightslategray;
-  border-color: lightslategray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightslategrey{
   background-color: lightslategrey;
-  border-color: lightslategrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightsteelblue{
   background-color: lightsteelblue;
-  border-color: lightsteelblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lightyellow{
   background-color: lightyellow;
-  border-color: lightyellow;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.lime{
   background-color: lime;
-  border-color: lime;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.limegreen{
   background-color: limegreen;
-  border-color: limegreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.linen{
   background-color: linen;
-  border-color: linen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.magenta{
   background-color: magenta;
-  border-color: magenta;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.maroon{
   background-color: maroon;
-  border-color: maroon;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumaquamarine{
   background-color: mediumaquamarine;
-  border-color: mediumaquamarine;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumblue{
   background-color: mediumblue;
-  border-color: mediumblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumorchid{
   background-color: mediumorchid;
-  border-color: mediumorchid;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumpurple{
   background-color: mediumpurple;
-  border-color: mediumpurple;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumseagreen{
   background-color: mediumseagreen;
-  border-color: mediumseagreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumslateblue{
   background-color: mediumslateblue;
-  border-color: mediumslateblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumspringgreen{
   background-color: mediumspringgreen;
-  border-color: mediumspringgreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumturquoise{
   background-color: mediumturquoise;
-  border-color: mediumturquoise;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mediumvioletred{
   background-color: mediumvioletred;
-  border-color: mediumvioletred;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.midnightblue{
   background-color: midnightblue;
-  border-color: midnightblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mintcream{
   background-color: mintcream;
-  border-color: mintcream;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.mistyrose{
   background-color: mistyrose;
-  border-color: mistyrose;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.moccasin{
   background-color: moccasin;
-  border-color: moccasin;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.navajowhite{
   background-color: navajowhite;
-  border-color: navajowhite;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.navy{
   background-color: navy;
-  border-color: navy;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.oldlace{
   background-color: oldlace;
-  border-color: oldlace;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.olive{
   background-color: olive;
-  border-color: olive;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.olivedrab{
   background-color: olivedrab;
-  border-color: olivedrab;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.orange{
   background-color: orange;
-  border-color: orange;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.orangered{
   background-color: orangered;
-  border-color: orangered;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.orchid{
   background-color: orchid;
-  border-color: orchid;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.palegoldenrod{
   background-color: palegoldenrod;
-  border-color: palegoldenrod;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.palegreen{
   background-color: palegreen;
-  border-color: palegreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.paleturquoise{
   background-color: paleturquoise;
-  border-color: paleturquoise;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.palevioletred{
   background-color: palevioletred;
-  border-color: palevioletred;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.papayawhip{
   background-color: papayawhip;
-  border-color: papayawhip;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.peachpuff{
   background-color: peachpuff;
-  border-color: peachpuff;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.peru{
   background-color: peru;
-  border-color: peru;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.pink{
   background-color: pink;
-  border-color: pink;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.plum{
   background-color: plum;
-  border-color: plum;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.powderblue{
   background-color: powderblue;
-  border-color: powderblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.purple{
   background-color: purple;
-  border-color: purple;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.rebeccapurple{
   background-color: rebeccapurple;
-  border-color: rebeccapurple;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.red{
   background-color: red;
-  border-color: red;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.rosybrown{
   background-color: rosybrown;
-  border-color: rosybrown;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.royalblue{
   background-color: royalblue;
-  border-color: royalblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.saddlebrown{
   background-color: saddlebrown;
-  border-color: saddlebrown;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.salmon{
   background-color: salmon;
-  border-color: salmon;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.sandybrown{
   background-color: sandybrown;
-  border-color: sandybrown;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.seagreen{
   background-color: seagreen;
-  border-color: seagreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.seashell{
   background-color: seashell;
-  border-color: seashell;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.sienna{
   background-color: sienna;
-  border-color: sienna;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.silver{
   background-color: silver;
-  border-color: silver;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.skyblue{
   background-color: skyblue;
-  border-color: skyblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.slateblue{
   background-color: slateblue;
-  border-color: slateblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.slategray{
   background-color: slategray;
-  border-color: slategray;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.slategrey{
   background-color: slategrey;
-  border-color: slategrey;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.snow{
   background-color: snow;
-  border-color: snow;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.springgreen{
   background-color: springgreen;
-  border-color: springgreen;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.steelblue{
   background-color: steelblue;
-  border-color: steelblue;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.tan{
   background-color: tan;
-  border-color: tan;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.teal{
   background-color: teal;
-  border-color: teal;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.thistle{
   background-color: thistle;
-  border-color: thistle;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.tomato{
   background-color: tomato;
-  border-color: tomato;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.turquoise{
   background-color: turquoise;
-  border-color: turquoise;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.violet{
   background-color: violet;
-  border-color: violet;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.wheat{
   background-color: wheat;
-  border-color: wheat;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.white{
   background-color: white;
-  border-color: white;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.whitesmoke{
   background-color: whitesmoke;
-  border-color: whitesmoke;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.yellow{
   background-color: yellow;
-  border-color: yellow;
+  border-color: black;
   color: white;
 }
 
 
 .vis-item.yellowgreen{
   background-color: yellowgreen;
-  border-color: yellowgreen;
+  border-color: black;
   color: white;
 }
 

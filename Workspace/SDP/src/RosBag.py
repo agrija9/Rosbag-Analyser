@@ -11,7 +11,7 @@ random.shuffle(colors)
 bag_names = glob.glob("bagfiles/*.bag")
 
 def convert_time(tm, nsec):
-    return time.strftime("%a, %d %b %Y %H:%M:%S ", time.localtime(tm)) + str(nsec)
+    return time.strftime("%d %m %Y %H:%M:%S ", time.localtime(tm)) + str(nsec)
 
 def read_message(msg):
     headers = msg.__slots__
