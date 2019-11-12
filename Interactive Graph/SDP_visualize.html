@@ -62,7 +62,7 @@
                 <div id="legend"></div>
             </div>
             <div class="column">
-                <p id="selectTopics" style="display:none">Select Topics :</p>
+                <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> select all</label></p>
                 <div id="container"></div>
                 <div align="center">
                     <button id="UpdateButton" style="display:none" align="center" onclick="updateGraph()">Update Graph</button>
@@ -152,7 +152,9 @@
                     var items = [{start:DateTime, content: "", className: Color, title: Title, selectable: true, editable:{remove:false}}];
                     labels["  " + Topic] = Color;
                     visdata.add(items);
-                    checkbox_array.push("check_" + Topic);
+                    if (checking == true){
+                        checkbox_array.push("check_" + Topic);
+                    }
                 });
                 if (checking == true){
                     checkMain(checkbox_array);
@@ -216,6 +218,20 @@
                 var node = document.createElement('div');        
                 node.innerHTML = '<input type="checkbox" checked=true id="check_' + Topic + '" name="check' + Topic + '"onclick="checkboxClick()"><label for="check' + Topic + '">'+ Topic +'</label>';       
                 document.getElementById('container').appendChild(node);
+            }
+
+            function selectAll(){
+                var selectall = document.getElementById('selectall');
+                if (selectall.checked == true){
+                    checkbox_array.forEach(ele => {
+                        document.getElementById(ele).checked = true;
+                    });
+                } else {
+                    checkbox_array.forEach(ele => {
+                        document.getElementById(ele).checked = false;
+                    });            
+                }
+                checkboxClick();
             }
 
         </script>
