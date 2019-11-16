@@ -1,117 +1,194 @@
 Topic,Color,Message,Count,Connections,Frequency
-/map_metadata,lime,nav_msgs/MapMetaData,1.0,1.0,
-/scan_rear,tan,sensor_msgs/LaserScan,266.0,1.0,10.048643986583613
-/move_base/local_costmap/footprint,orchid,geometry_msgs/PolygonStamped,53.0,1.0,1.999830737135009
-/move_base/feedback,darkgrey,move_base_msgs/MoveBaseActionFeedback,140.0,1.0,9.999532721420909
-/arm_1/arm_controller/follow_joint_trajectory/result,rosybrown,control_msgs/FollowJointTrajectoryActionResult,1.0,1.0,
-/mcr_common/dynamic_reconfigure_client/event_in,blue,std_msgs/String,1.0,1.0,
-/arm_1/arm_controller/follow_joint_trajectory/goal,indigo,control_msgs/FollowJointTrajectoryActionGoal,1.0,1.0,
-/move_group/sense_for_plan/parameter_updates,paleturquoise,dynamic_reconfigure/Config,1.0,1.0,
-/move_group/goal,orangered,moveit_msgs/MoveGroupActionGoal,2.0,1.0,0.06849194765190728
-/move_base_safe_server/feedback,gold,mir_yb_action_msgs/GenericExecuteActionFeedback,12.0,1.0,227.58024959305482
-/move_base/GlobalPlannerWithOrientations/potential,gray,nav_msgs/OccupancyGrid,26.0,1.0,4.933546626517361
-/particlecloud,indianred,geometry_msgs/PoseArray,161.0,1.0,18.702195587422192
-/move_base/status,sandybrown,actionlib_msgs/GoalStatusArray,136.0,1.0,5.001155404946182
-/pickup/status,violet,actionlib_msgs/GoalStatusArray,135.0,1.0,5.00077676917675
-/move_base/global_costmap/footprint,olivedrab,geometry_msgs/PolygonStamped,8.0,1.0,0.3000165948510183
-/poses,ghostwhite,visualization_msgs/MarkerArray,1.0,1.0,
-/move_group/sense_for_plan/parameter_descriptions,cornsilk,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_base/local_costmap/obstacle_layer/parameter_updates,darkcyan,dynamic_reconfigure/Config,1.0,1.0,
-/move_group/result,springgreen,moveit_msgs/MoveGroupActionResult,2.0,1.0,0.05879556853724186
-/arm_moveit_client/target_string_pose,grey,std_msgs/String,2.0,1.0,0.06876998031802843
-/move_base/global_costmap/inflation_layer/parameter_descriptions,mediumslateblue,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/mir_perception/barrier_tape_detection/event_in,tomato,std_msgs/String,2.0,1.0,0.05100193294746046
-/move_group/status,lightskyblue,actionlib_msgs/GoalStatusArray,136.0,1.0,5.000815524534889
-/dashboard/platform_state,greenyellow,pr2_msgs/PowerBoardState,14.0,1.0,0.49981404308933236
-/mcr_navigation/direct_base_controller/coordinator/event_out,lightsteelblue,std_msgs/String,1.0,1.0,
-/odom,bisque,nav_msgs/Odometry,1308.0,1.0,50.4456551807084
-/arm_moveit_client/event_in,white,std_msgs/String,2.0,1.0,0.06877855306283348
-/move_base/current_goal,lightpink,geometry_msgs/PoseStamped,1.0,1.0,
-/move_group/planning_scene_monitor/parameter_updates,mediumpurple,dynamic_reconfigure/Config,1.0,1.0,
-/hokuyo_rear_node/parameter_updates,lightseagreen,dynamic_reconfigure/Config,1.0,1.0,
-/move_base/local_costmap/costmap,teal,nav_msgs/OccupancyGrid,17.0,1.0,1.9851564226798806
-/move_group/trajectory_execution/parameter_descriptions,brown,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_group/display_planned_path,navajowhite,moveit_msgs/DisplayTrajectory,2.0,1.0,0.05629453290856098
-/move_base_safe_server/result,mediumorchid,mir_yb_action_msgs/GenericExecuteActionResult,1.0,1.0,
-/move_base/local_costmap/inflation_layer/parameter_updates,slategrey,dynamic_reconfigure/Config,1.0,1.0,
-/gripper_controller/state,darkslateblue,dynamixel_msgs/JointState,264.0,1.0,9.99891292946438
-/move_base/parameter_updates,lightcoral,dynamic_reconfigure/Config,1.0,1.0,
-/move_group/monitored_planning_scene,goldenrod,moveit_msgs/PlanningScene,105.0,1.0,3.9971695915015317
-/move_group/trajectory_execution/parameter_updates,aqua,dynamic_reconfigure/Config,1.0,1.0,
-/joy,royalblue,sensor_msgs/Joy,1310.0,1.0,49.65906561530629
-/move_base/force_field_recovery/obstacle_neighborhood,mediumaquamarine,visualization_msgs/Marker,1.0,1.0,
-/scan_combined,lightblue,sensor_msgs/LaserScan,532.0,2.0,20.156685969675852
-/move_base/DWAPlannerROS/global_plan,magenta,nav_msgs/Path,42.0,1.0,9.95559944077987
-/dashboard_agg,whitesmoke,pr2_msgs/DashboardState,27.0,1.0,1.0000201467758185
-/move_base/local_costmap/parameter_updates,darkgoldenrod,dynamic_reconfigure/Config,1.0,1.0,
-/mcr_navigation/direct_base_controller/coordinator/parameter_updates,steelblue,dynamic_reconfigure/Config,2.0,1.0,0.3240627508136522
-/move_base/goal,palegreen,move_base_msgs/MoveBaseActionGoal,1.0,1.0,
-/mcr_navigation/direct_base_controller/coordinator/event_in,slateblue,std_msgs/String,2.0,1.0,0.19985406088407617
-/diagnostics_toplevel_state,lavender,diagnostic_msgs/DiagnosticStatus,26.0,1.0,1.0000066757647803
-/move_group/plan_execution/parameter_descriptions,olive,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_group/plan_execution/parameter_updates,darkmagenta,dynamic_reconfigure/Config,1.0,1.0,
-/mcr_common/dynamic_reconfigure_client/configuration_name,darkorchid,std_msgs/String,1.0,1.0,
-/mcr_navigation/direct_base_controller/input_pose,yellow,geometry_msgs/PoseStamped,1.0,1.0,
-/move_base/global_costmap/obstacle_layer/parameter_updates,mediumblue,dynamic_reconfigure/Config,1.0,1.0,
-/pose_text,darkviolet,visualization_msgs/MarkerArray,1.0,1.0,
-/move_base/global_costmap/costmap_updates,slategray,map_msgs/OccupancyGridUpdate,5.0,1.0,0.19988517681479034
-/move_base/local_costmap/inflation_layer/parameter_descriptions,rebeccapurple,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_base/GlobalPlannerWithOrientations/parameter_updates,palegoldenrod,dynamic_reconfigure/Config,1.0,1.0,
-/move_base_safe_server/status,moccasin,actionlib_msgs/GoalStatusArray,135.0,1.0,5.0011882028685
-/tf,darkturquoise,tf2_msgs/TFMessage,3401.0,3.0,405.227187092411
-/move_base/global_costmap/static_layer/parameter_updates,coral,dynamic_reconfigure/Config,1.0,1.0,
-/rosout_agg,blueviolet,rosgraph_msgs/Log,93.0,1.0,262.64466639531605
-/mcr_common/dynamic_reconfigure_client/event_out,darkgray,std_msgs/String,1.0,1.0,
-/mir_teleop_joypad/parameter_descriptions,lightsalmon,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/arm_1/gripper_controller/follow_joint_trajectory/status,lightyellow,actionlib_msgs/GoalStatusArray,134.0,1.0,5.003177753814736
-/move_base/local_costmap/costmap_updates,burlywood,map_msgs/OccupancyGridUpdate,20.0,1.0,1.005623555300132
-/move_base/local_costmap/parameter_descriptions,limegreen,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/hokuyo_front_node/parameter_updates,darkslategray,dynamic_reconfigure/Config,1.0,1.0,
-/mcr_common/twist_to_motion_direction_conversion/event_in,fuchsia,std_msgs/String,1.0,1.0,
-/tf_static,firebrick,tf2_msgs/TFMessage,1.0,1.0,
-/move_base/global_costmap/inflation_layer/parameter_updates,saddlebrown,dynamic_reconfigure/Config,1.0,1.0,
-/move_base/DWAPlannerROS/parameter_descriptions,lawngreen,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/diagnostics,turquoise,diagnostic_msgs/DiagnosticArray,162.0,6.0,14.712468211235246
-/cmd_vel,snow,geometry_msgs/Twist,184.0,1.0,11.712628560098967
-/place/status,lightgrey,actionlib_msgs/GoalStatusArray,133.0,1.0,4.999671004009937
-/move_group/feedback,mediumseagreen,moveit_msgs/MoveGroupActionFeedback,6.0,1.0,78.73078800165183
-/joint_states,lemonchiffon,sensor_msgs/JointState,2917.0,2.0,313.01944102391883
-/move_base_wrapper/pose_in,green,geometry_msgs/PoseStamped,1.0,1.0,
-/move_base_wrapper/event_in,lavenderblush,std_msgs/String,1.0,1.0,
-/mir_teleop_joypad/parameter_updates,darkred,dynamic_reconfigure/Config,1.0,1.0,
-/move_base/global_costmap/obstacle_layer/parameter_descriptions,dimgrey,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/pregrasp_planner_node/parameter_descriptions,mediumturquoise,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/hokuyo_rear_node/parameter_descriptions,chocolate,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_base/global_costmap/costmap,darkkhaki,nav_msgs/OccupancyGrid,1.0,1.0,
-/cmd_vel_prio_medium,navy,geometry_msgs/Twist,184.0,2.0,11.714853100133228
-/move_base/DWAPlannerROS/parameter_updates,thistle,dynamic_reconfigure/Config,1.0,1.0,
-/arm_1/arm_controller/follow_joint_trajectory/status,peachpuff,actionlib_msgs/GoalStatusArray,136.0,1.0,5.000010728859081
-/move_base_wrapper/event_out,lightgoldenrodyellow,std_msgs/String,1.0,1.0,
-/amcl_pose,oldlace,geometry_msgs/PoseWithCovarianceStamped,81.0,1.0,9.963569331344248
-/move_base/parameter_descriptions,chartreuse,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_base/global_costmap/parameter_updates,cadetblue,dynamic_reconfigure/Config,1.0,1.0,
-/hokuyo_front_node/parameter_descriptions,seagreen,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_base/force_field_recovery/obstacle_cloud,red,sensor_msgs/PointCloud2,1.0,1.0,
-/move_base/GlobalPlannerWithOrientations/plan,lightcyan,geometry_msgs/PoseArray,2.0,1.0,0.19995839031146434
-/mir_manipulation/look_at_point/event_in,darkorange,std_msgs/String,2.0,1.0,0.07024667860628499
-/move_base/global_costmap/static_layer/parameter_descriptions,wheat,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/motor_states/gripper_port,palevioletred,dynamixel_msgs/MotorStateList,263.0,1.0,10.003813767007218
-/arm_moveit_client/event_out,darkolivegreen,std_msgs/String,2.0,1.0,0.05879029829106158
-/map,cornflowerblue,nav_msgs/OccupancyGrid,1.0,1.0,
-/mcr_navigation/direct_base_controller/coordinator/parameter_descriptions,hotpink,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/rosout,mintcream,rosgraph_msgs/Log,173.0,28.0,127100.12121212122
-/mcr_navigation/laser_distances/distances,purple,std_msgs/Float32MultiArray,265.0,1.0,10.000784458657956
-/move_base/local_costmap/obstacle_layer/parameter_descriptions,black,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/amcl/parameter_descriptions,salmon,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/execute_trajectory/status,pink,actionlib_msgs/GoalStatusArray,132.0,1.0,4.998979776695049
-/scan_front,antiquewhite,sensor_msgs/LaserScan,263.0,1.0,9.974397572454205
-/amcl/parameter_updates,darkblue,dynamic_reconfigure/Config,1.0,1.0,
-/move_base/DWAPlannerROS/local_plan,azure,nav_msgs/Path,42.0,1.0,9.955221365385208
-/move_base/GlobalPlannerWithOrientations/parameter_descriptions,seashell,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/move_group/planning_scene_monitor/parameter_descriptions,silver,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/pregrasp_planner_node/parameter_updates,maroon,dynamic_reconfigure/Config,1.0,1.0,
-/move_base/force_field_recovery/force_field_vector,midnightblue,visualization_msgs/Marker,1.0,1.0,
-/move_base/result,yellowgreen,move_base_msgs/MoveBaseActionResult,1.0,1.0,
-/move_base/global_costmap/parameter_descriptions,darksalmon,dynamic_reconfigure/ConfigDescription,1.0,1.0,
-/diagnostics_agg,aliceblue,diagnostic_msgs/DiagnosticArray,27.0,1.0,0.9999988079085256
-/arm_1/gripper_controller/gripper_command/status,khaki,actionlib_msgs/GoalStatusArray,133.0,1.0,5.002661571334943
+/map_metadata,"color_(197, 3, 24)",nav_msgs/MapMetaData,1.0,1.0,
+/rosout_agg,"color_(177, 239, 4)",rosgraph_msgs/Log,339.0,1.0,36954.220264317184
+/scan_rear,"color_(10, 72, 93)",sensor_msgs/LaserScan,263.0,1.0,10.047536687379925
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressedDepth/parameter_updates,"color_(209, 15, 36)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw/theora,"color_(173, 235, 0)",theora_image_transport/Packet,3.0,1.0,1962.706598034628
+/move_base/local_costmap/footprint,"color_(140, 202, 223)",geometry_msgs/PolygonStamped,52.0,1.0,2.000056268367688
+/move_base/feedback,"color_(165, 227, 248)",move_base_msgs/MoveBaseActionFeedback,87.0,1.0,9.999187058737986
+/mcr_common/dynamic_reconfigure_client/event_in,"color_(117, 179, 200)",std_msgs/String,1.0,1.0,
+/mcr_navigation/direct_base_controller/coordinator/event_out,"color_(157, 219, 240)",std_msgs/String,2.0,1.0,0.9958792960208792
+/move_group/sense_for_plan/parameter_updates,"color_(148, 210, 231)",dynamic_reconfigure/Config,1.0,1.0,
+/move_group/goal,"color_(225, 31, 52)",moveit_msgs/MoveGroupActionGoal,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/compressed/parameter_updates,"color_(103, 165, 186)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base_safe_server/feedback,"color_(230, 36, 57)",mir_yb_action_msgs/GenericExecuteActionFeedback,11.0,1.0,277.14444297608037
+/move_base/GlobalPlannerWithOrientations/potential,"color_(98, 160, 181)",nav_msgs/OccupancyGrid,2.0,1.0,0.19996270875196795
+/arm_cam3d/infra1/image_rect_raw/compressed/parameter_descriptions,"color_(192, 254, 19)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw,"color_(17, 79, 100)",sensor_msgs/Image,1.0,1.0,
+/arm_cam3d/realsense2_camera_manager/bond,"color_(227, 33, 54)",bond/Status,26.0,3.0,25.487217816668185
+/particlecloud,"color_(97, 159, 180)",geometry_msgs/PoseArray,160.0,1.0,17.932345999931595
+/move_base/status,"color_(16, 78, 99)",actionlib_msgs/GoalStatusArray,135.0,1.0,5.000544249641886
+/arm_cam3d/depth/image_rect_raw/compressedDepth/parameter_updates,"color_(18, 80, 101)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/compressedDepth/parameter_descriptions,"color_(113, 175, 196)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/theora,"color_(153, 215, 236)",theora_image_transport/Packet,24.0,1.0,21.544606533799055
+/arm_cam3d/infra2/image_rect_raw/theora,"color_(191, 253, 18)",theora_image_transport/Packet,24.0,1.0,21.611100519886026
+/pickup/status,"color_(167, 229, 250)",actionlib_msgs/GoalStatusArray,133.0,1.0,5.001554972573336
+/move_base/global_costmap/footprint,"color_(109, 171, 192)",geometry_msgs/PolygonStamped,8.0,1.0,0.29998305654857244
+/poses,"color_(32, 94, 115)",visualization_msgs/MarkerArray,1.0,1.0,
+/map,"color_(189, 251, 16)",nav_msgs/OccupancyGrid,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw/compressedDepth/parameter_descriptions,"color_(218, 24, 45)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/local_costmap/obstacle_layer/parameter_updates,"color_(243, 49, 70)",dynamic_reconfigure/Config,1.0,1.0,
+/move_group/result,"color_(202, 8, 29)",moveit_msgs/MoveGroupActionResult,1.0,1.0,
+/arm_cam3d/rgb/image_raw/compressedDepth/parameter_updates,"color_(114, 176, 197)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_moveit_client/target_string_pose,"color_(233, 39, 60)",std_msgs/String,1.0,1.0,
+/move_group/sense_for_plan/parameter_descriptions,"color_(175, 237, 2)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/global_costmap/inflation_layer/parameter_descriptions,"color_(198, 4, 25)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/mir_perception/barrier_tape_detection/event_in,"color_(203, 9, 30)",std_msgs/String,2.0,1.0,0.0704575051760843
+/move_group/status,"color_(210, 16, 37)",actionlib_msgs/GoalStatusArray,132.0,1.0,5.000517421856185
+/arm_cam3d/depth/image_rect_raw/theora/parameter_updates,"color_(122, 184, 205)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressed/parameter_descriptions,"color_(141, 203, 224)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/dashboard/platform_state,"color_(251, 57, 78)",pr2_msgs/PowerBoardState,13.0,1.0,0.4999034591193469
+/arm_cam3d/rgb/image_rect_color/compressed/parameter_updates,"color_(1, 63, 84)",dynamic_reconfigure/Config,1.0,1.0,
+/hokuyo_rear_node/parameter_descriptions,"color_(151, 213, 234)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw,"color_(216, 22, 43)",sensor_msgs/Image,21.0,1.0,20.64644177426421
+/move_base/current_goal,"color_(187, 249, 14)",geometry_msgs/PoseStamped,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/theora/parameter_updates,"color_(119, 181, 202)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/depth/image_rect_raw/compressedDepth,"color_(146, 208, 229)",sensor_msgs/CompressedImage,20.0,1.0,4.323935588956929
+/move_group/planning_scene_monitor/parameter_updates,"color_(26, 88, 109)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw/theora/parameter_descriptions,"color_(213, 19, 40)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/hokuyo_rear_node/parameter_updates,"color_(147, 209, 230)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/local_costmap/costmap,"color_(168, 230, 251)",nav_msgs/OccupancyGrid,13.0,1.0,1.0001185080763135
+/move_group/trajectory_execution/parameter_descriptions,"color_(207, 13, 34)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressedDepth/parameter_descriptions,"color_(13, 75, 96)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base_wrapper/event_in,"color_(126, 188, 209)",std_msgs/String,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressed/parameter_updates,"color_(185, 247, 12)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/camera_info,"color_(136, 198, 219)",sensor_msgs/CameraInfo,115.0,1.0,29.967020090880514
+/move_group/display_planned_path,"color_(237, 43, 64)",moveit_msgs/DisplayTrajectory,1.0,1.0,
+/move_base_safe_server/result,"color_(206, 12, 33)",mir_yb_action_msgs/GenericExecuteActionResult,1.0,1.0,
+/arm_cam3d/stereo_module/parameter_updates,"color_(20, 82, 103)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/local_costmap/inflation_layer/parameter_updates,"color_(99, 161, 182)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb_camera/parameter_updates,"color_(220, 26, 47)",dynamic_reconfigure/Config,1.0,1.0,
+/gripper_controller/state,"color_(159, 221, 242)",dynamixel_msgs/JointState,260.0,1.0,10.000104905275304
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressed,"color_(12, 74, 95)",sensor_msgs/CompressedImage,2.0,1.0,4.928607352187748
+/mcr_navigation/direct_base_controller/coordinator/parameter_descriptions,"color_(4, 66, 87)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/parameter_updates,"color_(163, 225, 246)",dynamic_reconfigure/Config,1.0,1.0,
+/move_group/monitored_planning_scene,"color_(162, 224, 245)",moveit_msgs/PlanningScene,86.0,1.0,3.997434355429455
+/move_group/trajectory_execution/parameter_updates,"color_(231, 37, 58)",dynamic_reconfigure/Config,1.0,1.0,
+/joy,"color_(21, 83, 104)",sensor_msgs/Joy,1297.0,1.0,49.76128416094722
+/scan_combined,"color_(3, 65, 86)",sensor_msgs/LaserScan,527.0,2.0,20.284975020433432
+/move_base/DWAPlannerROS/global_plan,"color_(104, 166, 187)",nav_msgs/Path,40.0,1.0,10.005687131433806
+/arm_cam3d/depth/image_rect_raw/compressed/parameter_updates,"color_(138, 200, 221)",dynamic_reconfigure/Config,1.0,1.0,
+/dashboard_agg,"color_(156, 218, 239)",pr2_msgs/DashboardState,26.0,1.0,0.9999349159641127
+/arm_cam3d/infra2/image_rect_raw/compressed/parameter_descriptions,"color_(171, 233, 254)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw,"color_(253, 59, 80)",sensor_msgs/Image,21.0,1.0,21.22559031608352
+/move_base/local_costmap/parameter_updates,"color_(15, 77, 98)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/camera_info,"color_(238, 44, 65)",sensor_msgs/CameraInfo,17.0,1.0,2467.2376470588233
+/mcr_navigation/direct_base_controller/coordinator/parameter_updates,"color_(217, 23, 44)",dynamic_reconfigure/Config,2.0,1.0,0.13903746506331913
+/move_base/goal,"color_(179, 241, 6)",move_base_msgs/MoveBaseActionGoal,1.0,1.0,
+/mcr_navigation/direct_base_controller/coordinator/event_in,"color_(120, 182, 203)",std_msgs/String,2.0,1.0,0.24606307088625448
+/arm_cam3d/rgb/image_rect_color/compressed,"color_(111, 173, 194)",sensor_msgs/CompressedImage,114.0,1.0,30.021286799178302
+/arm_cam3d/depth/image_rect_raw/compressed,"color_(135, 197, 218)",sensor_msgs/CompressedImage,30.0,1.0,6.8827458097716745
+/diagnostics_toplevel_state,"color_(115, 177, 198)",diagnostic_msgs/DiagnosticStatus,26.0,1.0,0.9999847414437646
+/move_group/plan_execution/parameter_descriptions,"color_(240, 46, 67)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/theora/parameter_descriptions,"color_(144, 206, 227)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/parameter_descriptions,"color_(6, 68, 89)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/depth_registered/points,"color_(241, 47, 68)",sensor_msgs/PointCloud2,1.0,1.0,
+/move_group/plan_execution/parameter_updates,"color_(223, 29, 50)",dynamic_reconfigure/Config,1.0,1.0,
+/mcr_common/dynamic_reconfigure_client/configuration_name,"color_(129, 191, 212)",std_msgs/String,1.0,1.0,
+/mcr_navigation/direct_base_controller/input_pose,"color_(25, 87, 108)",geometry_msgs/PoseStamped,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressedDepth,"color_(143, 205, 226)",sensor_msgs/CompressedImage,2.0,1.0,4.967876960978816
+/arm_cam3d/infra1/image_rect_raw/compressedDepth/parameter_descriptions,"color_(27, 89, 110)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/rgb/image_raw/compressed/parameter_updates,"color_(128, 190, 211)",dynamic_reconfigure/Config,1.0,1.0,
+/pose_text,"color_(131, 193, 214)",visualization_msgs/MarkerArray,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/image_raw/theora/parameter_updates,"color_(193, 255, 20)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/global_costmap/costmap_updates,"color_(176, 238, 3)",map_msgs/OccupancyGridUpdate,6.0,1.0,0.2999763197518659
+/move_base/local_costmap/parameter_descriptions,"color_(214, 20, 41)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw/compressed,"color_(30, 92, 113)",sensor_msgs/CompressedImage,31.0,1.0,22.969712735108967
+/move_base/local_costmap/inflation_layer/parameter_descriptions,"color_(108, 170, 191)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/GlobalPlannerWithOrientations/parameter_updates,"color_(244, 50, 71)",dynamic_reconfigure/Config,1.0,1.0,
+/execute_trajectory/status,"color_(205, 11, 32)",actionlib_msgs/GoalStatusArray,130.0,1.0,5.000487613543019
+/move_base_safe_server/status,"color_(201, 7, 28)",actionlib_msgs/GoalStatusArray,134.0,1.0,4.999879601516782
+/tf,"color_(127, 189, 210)",tf2_msgs/TFMessage,3302.0,3.0,214.33409985180643
+/arm_cam3d/rgb/image_raw,"color_(182, 244, 9)",sensor_msgs/Image,115.0,1.0,30.03515304715836
+/move_base/global_costmap/static_layer/parameter_updates,"color_(2, 64, 85)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/theora/parameter_descriptions,"color_(124, 186, 207)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/mcr_common/dynamic_reconfigure_client/event_out,"color_(239, 45, 66)",std_msgs/String,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color,"color_(142, 204, 225)",sensor_msgs/Image,118.0,1.0,30.0470947267374
+/arm_cam3d/rgb_rectify_color/parameter_descriptions,"color_(160, 222, 243)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/mir_teleop_joypad/parameter_descriptions,"color_(0, 62, 83)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/compressed,"color_(172, 234, 255)",sensor_msgs/CompressedImage,21.0,1.0,20.648474614653743
+/arm_1/gripper_controller/follow_joint_trajectory/status,"color_(106, 168, 189)",actionlib_msgs/GoalStatusArray,133.0,1.0,5.001003347472405
+/move_base/global_costmap/inflation_layer/parameter_updates,"color_(101, 163, 184)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/compressedDepth/parameter_updates,"color_(158, 220, 241)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw/theora/parameter_updates,"color_(250, 56, 77)",dynamic_reconfigure/Config,1.0,1.0,
+/hokuyo_front_node/parameter_updates,"color_(248, 54, 75)",dynamic_reconfigure/Config,1.0,1.0,
+/mcr_common/twist_to_motion_direction_conversion/event_in,"color_(166, 228, 249)",std_msgs/String,1.0,1.0,
+/tf_static,"color_(152, 214, 235)",tf2_msgs/TFMessage,2.0,2.0,2519.1015015015014
+/arm_cam3d/infra2/camera_info,"color_(24, 86, 107)",sensor_msgs/CameraInfo,21.0,1.0,21.415407866554
+/move_base/DWAPlannerROS/parameter_descriptions,"color_(196, 2, 23)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/diagnostics,"color_(228, 34, 55)",diagnostic_msgs/DiagnosticArray,181.0,7.0,7.600524785990244
+/cmd_vel,"color_(190, 252, 17)",geometry_msgs/Twist,158.0,1.0,10.045082242041634
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressed/parameter_descriptions,"color_(149, 211, 232)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/place/status,"color_(23, 85, 106)",actionlib_msgs/GoalStatusArray,132.0,1.0,4.99990940258155
+/move_group/feedback,"color_(212, 18, 39)",moveit_msgs/MoveGroupActionFeedback,2.0,1.0,91.43494942448552
+/joint_states,"color_(110, 172, 193)",sensor_msgs/JointState,2882.0,2.0,244.9085600840827
+/move_base_wrapper/pose_in,"color_(132, 194, 215)",geometry_msgs/PoseStamped,1.0,1.0,
+/arm_1/gripper_controller/gripper_command/status,"color_(188, 250, 15)",actionlib_msgs/GoalStatusArray,132.0,1.0,5.00100036604574
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressed,"color_(28, 90, 111)",sensor_msgs/CompressedImage,16.0,1.0,1811.794384449244
+/arm_cam3d/rgb_camera/parameter_descriptions,"color_(9, 71, 92)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/theora,"color_(229, 35, 56)",theora_image_transport/Packet,116.0,1.0,29.999384892678076
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressed/parameter_updates,"color_(123, 185, 206)",dynamic_reconfigure/Config,1.0,1.0,
+/mir_teleop_joypad/parameter_updates,"color_(125, 187, 208)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/global_costmap/obstacle_layer/parameter_descriptions,"color_(5, 67, 88)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/pregrasp_planner_node/parameter_descriptions,"color_(255, 61, 82)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/image_raw,"color_(139, 201, 222)",sensor_msgs/Image,12.0,1.0,2.1692020459564434
+/arm_moveit_client/event_in,"color_(112, 174, 195)",std_msgs/String,1.0,1.0,
+/arm_cam3d/depth/image_rect_raw/compressed/parameter_descriptions,"color_(242, 48, 69)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/theora/parameter_updates,"color_(150, 212, 233)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/image_raw/theora/parameter_descriptions,"color_(133, 195, 216)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/local_costmap/costmap_updates,"color_(174, 236, 1)",map_msgs/OccupancyGridUpdate,20.0,1.0,1.0007351076284894
+/move_group/planning_scene_monitor/parameter_descriptions,"color_(200, 6, 27)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/cmd_vel_prio_medium,"color_(137, 199, 220)",geometry_msgs/Twist,158.0,2.0,10.043230170607602
+/arm_cam3d/aligned_depth_to_rgb/image_raw/theora/parameter_updates,"color_(31, 93, 114)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/DWAPlannerROS/parameter_updates,"color_(121, 183, 204)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_1/arm_controller/follow_joint_trajectory/status,"color_(246, 52, 73)",actionlib_msgs/GoalStatusArray,132.0,1.0,5.000028610393202
+/move_base_wrapper/event_out,"color_(254, 60, 81)",std_msgs/String,1.0,1.0,
+/amcl_pose,"color_(105, 167, 188)",geometry_msgs/PoseWithCovarianceStamped,81.0,1.0,9.987662772935252
+/arm_cam3d/aligned_depth_to_infra1/image_raw/theora,"color_(219, 25, 46)",theora_image_transport/Packet,3.0,1.0,2189.0939457202503
+/move_base/global_costmap/parameter_updates,"color_(134, 196, 217)",dynamic_reconfigure/Config,1.0,1.0,
+/hokuyo_front_node/parameter_descriptions,"color_(195, 1, 22)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/camera_info,"color_(249, 55, 76)",sensor_msgs/CameraInfo,32.0,1.0,22.795006548877453
+/arm_cam3d/depth/image_rect_raw/theora/parameter_descriptions,"color_(234, 40, 61)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/depth/camera_info,"color_(29, 91, 112)",sensor_msgs/CameraInfo,32.0,1.0,6.660014544900234
+/arm_cam3d/rgb/image_raw/compressed,"color_(154, 216, 237)",sensor_msgs/CompressedImage,115.0,1.0,29.99391440840684
+/arm_cam3d/extrinsics/depth_to_color,"color_(181, 243, 8)",realsense2_camera/Extrinsics,1.0,1.0,
+/arm_cam3d/stereo_module/parameter_descriptions,"color_(232, 38, 59)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/GlobalPlannerWithOrientations/plan,"color_(183, 245, 10)",geometry_msgs/PoseArray,2.0,1.0,0.19997224239360772
+/mir_manipulation/look_at_point/event_in,"color_(180, 242, 7)",std_msgs/String,2.0,1.0,0.11201610393870978
+/arm_cam3d/infra2/image_rect_raw/compressedDepth/parameter_updates,"color_(204, 10, 31)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/global_costmap/static_layer/parameter_descriptions,"color_(145, 207, 228)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/result,"color_(247, 53, 74)",move_base_msgs/MoveBaseActionResult,1.0,1.0,
+/arm_cam3d/depth/image_rect_raw,"color_(169, 231, 252)",sensor_msgs/Image,31.0,1.0,7.2718358147497995
+/arm_moveit_client/event_out,"color_(22, 84, 105)",std_msgs/String,1.0,1.0,
+/arm_cam3d/rgb/image_rect_color/compressed/parameter_descriptions,"color_(118, 180, 201)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/global_costmap/obstacle_layer/parameter_updates,"color_(100, 162, 183)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/aligned_depth_to_infra1/image_raw/theora/parameter_descriptions,"color_(178, 240, 5)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/rgb/image_raw/compressed/parameter_descriptions,"color_(245, 51, 72)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra1/image_rect_raw/compressedDepth/parameter_updates,"color_(211, 17, 38)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb/image_raw/theora/parameter_updates,"color_(236, 42, 63)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/extrinsics/depth_to_infra1,"color_(19, 81, 102)",realsense2_camera/Extrinsics,1.0,1.0,
+/odom,"color_(221, 27, 48)",nav_msgs/Odometry,1296.0,1.0,50.40382627923186
+/arm_cam3d/extrinsics/depth_to_infra2,"color_(170, 232, 253)",realsense2_camera/Extrinsics,1.0,1.0,
+/rosout,"color_(164, 226, 247)",rosgraph_msgs/Log,430.0,13.0,51150.04878048781
+/mcr_navigation/laser_distances/distances,"color_(186, 248, 13)",std_msgs/Float32MultiArray,263.0,1.0,9.999127464139015
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressedDepth,"color_(252, 58, 79)",sensor_msgs/CompressedImage,7.0,1.0,1.724746112868926
+/arm_cam3d/rgb/image_raw/theora,"color_(96, 158, 179)",theora_image_transport/Packet,117.0,1.0,29.950543055248104
+/move_base/local_costmap/obstacle_layer/parameter_descriptions,"color_(7, 69, 90)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/depth/image_rect_raw/compressedDepth/parameter_descriptions,"color_(107, 169, 190)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/amcl/parameter_descriptions,"color_(235, 41, 62)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw/compressed/parameter_updates,"color_(102, 164, 185)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/rgb_rectify_color/parameter_updates,"color_(226, 32, 53)",dynamic_reconfigure/Config,1.0,1.0,
+/scan_front,"color_(8, 70, 91)",sensor_msgs/LaserScan,259.0,1.0,9.972452917218472
+/amcl/parameter_updates,"color_(161, 223, 244)",dynamic_reconfigure/Config,1.0,1.0,
+/move_base/global_costmap/parameter_descriptions,"color_(155, 217, 238)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/move_base/GlobalPlannerWithOrientations/parameter_descriptions,"color_(199, 5, 26)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/depth/image_rect_raw/theora,"color_(194, 0, 21)",theora_image_transport/Packet,3.0,1.0,71697.50427350428
+/arm_cam3d/aligned_depth_to_infra1/image_raw/compressedDepth/parameter_updates,"color_(130, 192, 213)",dynamic_reconfigure/Config,1.0,1.0,
+/arm_cam3d/infra2/image_rect_raw/theora/parameter_descriptions,"color_(222, 28, 49)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/arm_cam3d/rgb/image_raw/compressedDepth/parameter_descriptions,"color_(11, 73, 94)",dynamic_reconfigure/ConfigDescription,1.0,1.0,
+/pregrasp_planner_node/parameter_updates,"color_(215, 21, 42)",dynamic_reconfigure/Config,1.0,1.0,
+/motor_states/gripper_port,"color_(224, 30, 51)",dynamixel_msgs/MotorStateList,259.0,1.0,10.000581775177274
+/move_base/DWAPlannerROS/local_plan,"color_(14, 76, 97)",nav_msgs/Path,40.0,1.0,9.999747282692917
+/diagnostics_agg,"color_(116, 178, 199)",diagnostic_msgs/DiagnosticArray,26.0,1.0,0.9999840262103662
+/move_base/global_costmap/costmap,"color_(184, 246, 11)",nav_msgs/OccupancyGrid,1.0,1.0,
+/arm_cam3d/aligned_depth_to_rgb/image_raw/compressedDepth/parameter_descriptions,"color_(208, 14, 35)",dynamic_reconfigure/ConfigDescription,1.0,1.0,

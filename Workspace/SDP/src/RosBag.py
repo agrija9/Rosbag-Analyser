@@ -18,7 +18,7 @@ def read_message(msg):
     for i in headers:
         print(i + ' : ' + str(getattr(msg, i)))
 
-def bag_info(bag, colors):
+def bag_info(bag):
     Start_Time = convert_time(bag.get_start_time(), (bag.get_start_time() - int(bag.get_start_time()))*10**9)
     End_Time = convert_time(bag.get_end_time(), (bag.get_end_time() - int(bag.get_end_time()))*10**9)
     Messages = bag.get_type_and_topic_info()[0].keys()
@@ -33,6 +33,8 @@ def bag_info(bag, colors):
     # print('Topics and Messages :')
     df1 = pd.DataFrame(columns = ['Topic', 'Color', 'Message', 'Count', 'Connections', 'Frequency'])
 
+    colors = color_gen(len(Topics))
+
     for idx, j in enumerate(Topics):
         # print('\n')
         # print('Topic : ' + str(j))
@@ -40,7 +42,7 @@ def bag_info(bag, colors):
         # print('Count : ' + str(msgs[idx].message_count))
         # print('Connections : ' + str(msgs[idx].connections))
         # print('Frequency : ' + str(msgs[idx].frequency) + ' Hz')
-        df1 = df1.append({'Topic' : j, 'Color' : colors[idx], 'Message' : msgs[idx].msg_type, 'Count' : msgs[idx].message_count, 'Connections' : msgs[idx].connections, 'Frequency' : msgs[idx].frequency}, ignore_index=True)
+        df1 = df1.append({'Topic' : j, 'Color': colors[idx],'Message' : msgs[idx].msg_type, 'Count' : msgs[idx].message_count, 'Connections' : msgs[idx].connections, 'Frequency' : msgs[idx].frequency}, ignore_index=True)
 
     df1 = df1.set_index('Topic')
     df1.to_csv('Rosbag_Info.csv', index=True)
@@ -53,17 +55,38 @@ def bag_content(bag, df):
         Time = convert_time(T.secs, T.nsecs)
         try:
             data = Msg.data
-            if type(data) == str:
-                df1 = df1.append({'Topic' : Topic , 'Time' : Time, 'Message' : Msg.data, 'Color' : df.loc[Topic].Color} , ignore_index=True)
+            data.decode('ascii')
+            if type(data) == str and data != "":
+                df1 = df1.append({'Time' : Time, 'Topic' : Topic, 'Message' : Msg.data, 'Color' : df.loc[Topic].Color} , ignore_index=True)
         except:
             None
 
-    df1 = df1.set_index('Time')
+    # df1 = df1.set_index('Time')
+    jsonfile =  df1.to_json(orient='records')
+    print(jsonfile)
     df1.to_csv('Rosbag_Content.csv', index=True)
 
-bag = rosbag.Bag(bag_names[2])
+def color_gen(n):
+    ret = []
+    r = int(random.random() * 256)
+    g = int(random.random() * 256)
+    b = int(random.random() * 256)
+    step = 256 / n
+    while len(ret) < n:
+        r += step
+        g += step
+        b += step
+        r = int(r) % 256
+        g = int(g) % 256
+        b = int(b) % 256
+        ret.append('color_' + str((r,g,b)))
+        ret = list(dict.fromkeys(ret))
+
+    return ret
+
+bag = rosbag.Bag(bag_names[0])
 print('--------------------------------------------------------------------')
-df = bag_info(bag, colors)
+df = bag_info(bag)
 bag_content(bag, df)
 print('--------------------------------------------------------------------')
 
