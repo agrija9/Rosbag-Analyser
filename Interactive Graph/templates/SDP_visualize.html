@@ -4,24 +4,18 @@
         <title>Network</title>
         <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
         <link href="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/static/styles.css">
         <style type="text/css">
-            #mynetwork {
-            width: 600px;
-            height: 400px;
-            border: 1px solid lightgray;
-            }
-            .column1 {
-                float: left;
-                width: 4%;
-                text-align: center;
 
+            .column1 {
+                border: 2px solid rgb(116, 109, 109);
+                border-radius: 10px;
                 /* Should be removed. Only for demonstration */
             }
 
             .column2 {
-                float: left;
-                width: 96%;
+                padding: 10px;
+                margin: 10px;
 
                 /* Should be removed. Only for demonstration */
             }
@@ -32,29 +26,23 @@
                 display: table;
                 clear: both;
             }
+
         </style>
     </head>
 
     <body>
 
-        <h1 align="center">RosBag Reader</h1>
+        <h1 align="center">ROSBAG READER</h1>
         <div align = "center">
-            <p>Choose RosBag file for visualization : 
-                <input type="file" name="my_file" id="my-file">
-            </p>
-        </div>
-        <div align="center">
-                <button id="mainButton" align="center" onclick="mainFunc()">Generate</button>
+            <p></p>
         </div>
         <p></p>
-        <div class="row">
-            <div class="column1">
-                <p id="topicsLabel" style="display:none">Topics :</p>
-            </div>
+        <div class="column1" id="topicsLabel" style="display:none">
             <div class="column2">
+                <h1 align = "center">VISUALIZER</h1>
                 <div id="visualization" style="display:none"></div>
             </div>
-          </div>
+        </div>
         <p></p>
         <div class="row">
             <div class="column">
@@ -68,7 +56,6 @@
                     <button id="UpdateButton" style="display:none" align="center" onclick="updateGraph()">Update Graph</button>
                 </div>
             </div>
-          </div>
         </div>
         <p></p>
 
@@ -80,13 +67,17 @@
             var labels = {};
             var stringTopic = [];
 
+            mainFunc();
+
             async function mainFunc(){
-                const file = 'Rosbag_Content.csv';
-                data_act = await getDataToJson(file);
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                var jsonfile = '{{ jsonfile|tojson|safe }}';
+                var jsonstring = jsonfile.substring(1, jsonfile.length -1)
+                data_act = JSON.parse(jsonstring);
                 var actual_data = JsonVisData(data_act, visdata, true);
                 chart(actual_data);
-                // document.getElementById("topicsLabel").style.display = "block"
-                document.getElementById("mainButton").style.display = "none"
+              
+                document.getElementById("topicsLabel").style.display = "block"
                 document.getElementById("selectTopics").style.display = "block"
                 document.getElementById("legendText").style.display = "block"
                 document.getElementById("UpdateButton").style.display = "block"                
@@ -115,7 +106,6 @@
                         new_data_act=new_data_act.filter(function(itm){return itm.Topic!==item.substring(6,)});
                     });
                 });
-                console.log(new_data_act);
                 var actual_data = JsonVisData(new_data_act, visdata, false);
                 chart(actual_data);
                 return new_data_act;
@@ -132,9 +122,9 @@
             function JsonVisData(data_act1, visdata, checking){
                 labels = {};
                 visdata.clear();
-                if (checking == true){
-                    data_act1.splice(data_act1.length-1, 1);
-                }
+                // if (checking == true){
+                //     data_act1.splice(data_act1.length-1, 1);
+                // }
                 data_act1.forEach(row => {
                     const Dat = parseInt(row.Time.substring(0, 2));
                     const Month = parseInt(row.Time.substring(3, 5));
@@ -147,9 +137,11 @@
                     const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
                     const Topic = row.Topic;
                     const Msg = row.Message;
-                    const Color = row.Color;
+                    const Color = row.Color.replace(/\s/g,'');
+                    injectStyles(Color)
+                    var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
                     const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
-                    var items = [{start:DateTime, content: "", className: Color, title: Title, selectable: true, editable:{remove:false}}];
+                    var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
                     labels["  " + Topic] = Color;
                     visdata.add(items);
                     if (checking == true){
@@ -189,10 +181,9 @@
                     var boxContainer = document.createElement("DIV");
                     var box = document.createElement("DIV");
                     var label = document.createElement("SPAN");
-
                     label.innerHTML = key;
                     box.className = "box";
-                    box.style.backgroundColor = colorList[key];
+                    box.style.backgroundColor = 'rgb' + colorList[key].substring(6,);
 
                     boxContainer.appendChild(box);
                     boxContainer.appendChild(label);
@@ -232,6 +223,14 @@
                     });            
                 }
                 checkboxClick();
+            }
+
+            function injectStyles(colors) {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                var classcolor = colors.replace('(', '').replace(')', '').replace(/,/g,'');
+                style.innerHTML = '.vis-item.' + classcolor + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: white; }';
+                document.getElementsByTagName('head')[0].appendChild(style);
             }
 
         </script>
