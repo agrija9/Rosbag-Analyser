@@ -49,6 +49,8 @@ def bag_info(bag):
 
     colors = color_gen(len(Topics))
     random.shuffle(colors)
+    random.shuffle(colors)
+    random.shuffle(colors)
     for idx, j in enumerate(Topics):
         df1 = df1.append({'Topic' : j, 'Color': colors[idx],'Message' : msgs[idx].msg_type, 'Count' : msgs[idx].message_count, 'Connections' : msgs[idx].connections, 'Frequency' : msgs[idx].frequency}, ignore_index=True)
 
@@ -58,9 +60,9 @@ def bag_info(bag):
 @app.route('/color_gen')
 def color_gen(n):
     ret = []
-    r = int(random.random() * 256)
-    g = int(random.random() * 256)
-    b = int(random.random() * 256)
+    r = int(random.uniform(0,1) * 256)
+    g = int(random.uniform(0,1) * 256)
+    b = int(random.uniform(0,1) * 256)
     step = 256 / n
     while len(ret) < n:
         r += step

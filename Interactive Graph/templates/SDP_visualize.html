@@ -52,7 +52,8 @@
             <div class="column">
                 <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> select all</label></p>
                 <div id="container"></div>
-                <div align="center">
+                <p></p>
+                <div>
                     <button id="UpdateButton" style="display:none" align="center" onclick="updateGraph()">Update Graph</button>
                 </div>
             </div>
@@ -122,9 +123,6 @@
             function JsonVisData(data_act1, visdata, checking){
                 labels = {};
                 visdata.clear();
-                // if (checking == true){
-                //     data_act1.splice(data_act1.length-1, 1);
-                // }
                 data_act1.forEach(row => {
                     const Dat = parseInt(row.Time.substring(0, 2));
                     const Month = parseInt(row.Time.substring(3, 5));
