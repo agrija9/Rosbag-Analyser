@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>About the project</title>
+        <link rel="stylesheet" href="/static/styles.css">
+        <style type="text/css">
+
+            .column1 {
+                border: 2px solid rgb(116, 109, 109);
+                border-radius: 10px;
+                /* Should be removed. Only for demonstration */
+            }
+
+            .column2 {
+                padding: 10px;
+                margin: 10px;
+
+                /* Should be removed. Only for demonstration */
+            }
+
+                /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1 align="center">Project details</h1>
+        <div align = "center">
+            <!--Normal text-->
+            <p>This project performs a postmortem analysis of a ROS Bag ...</p> 
+            <p>TODO: Add full description</p> 
+        </div>
+
+        <div class="column1" id="topicsLabel" style="display:none">
+            <div class="column2">
+                <h1 align = "center">testing</h1>
+                <div id="visualization" style="display:none"></div>
+            </div>
+        </div>
+
+    </body>
+</html>
