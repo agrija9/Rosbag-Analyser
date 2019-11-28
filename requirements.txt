@@ -1,0 +1,6 @@
+numpy==1.11.0
+Werkzeug==0.16.0
+Flask==1.1.1
+gevent==1.4.0
+pandas==0.24.2
+flask_testing==0.7.1
