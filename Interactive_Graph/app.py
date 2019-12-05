@@ -13,6 +13,10 @@ myapp = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@myapp.route("/team", methods=["GET", "POST"])
+def team():
+    return render_template('team.html')
+
 @myapp.route("/upload", methods=["GET", "POST"])
 def upload():
     if request.method == "POST":
