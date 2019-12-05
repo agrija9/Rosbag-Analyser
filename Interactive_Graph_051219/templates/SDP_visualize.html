@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Network</title>
+        <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
+        <link href="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/static/styles.css">
+        <style type="text/css">
+
+            .column1 {
+                border: 2px solid rgb(116, 109, 109);
+                border-radius: 10px;
+                /* Should be removed. Only for demonstration */
+            }
+
+            .column2 {
+                padding: 10px;
+                margin: 10px;
+
+                /* Should be removed. Only for demonstration */
+            }
+
+                /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1 align="center">ROSBAG READER</h1>
+        <div align = "center">
+            <p></p>
+        </div>
+        <p></p>
+        <div class="column1" id="topicsLabel" style="display:none">
+            <div class="column2">
+                <h1 align = "center">VISUALIZER</h1>
+                <div id="visualization" style="display:none"></div>
+            </div>
+        </div>
+        <div class="column1" id="tL" style="display:none">
+            <div class="column2">
+                <h1 align = "center">VISUALIZER</h1>
+                <div id="VV" style="display:none"></div>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="column">
+                <p id="legendText" style="display:none">Legends :</p>
+                <div id="legend"></div>
+            </div>
+            <div class="column">
+                <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> select all</label></p>
+                <div id="container"></div>
+                <p></p>
+                <div>
+                    <button id="UpdateButton" style="display:none" align="center" onclick="updateGraph()">Update Graph</button>
+                </div>
+            </div>
+        </div>
+        <p></p>
+
+        <script type="text/javascript">
+            
+            var data_act;
+            var visdata = new vis.DataSet();
+            var checkbox_array = [];
+            var labels = {};
+            var stringTopic = [];
+
+            mainFunc();
+
+            async function mainFunc(){
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                var jsonfile = '{{ jsonfile|tojson|safe }}';
+                var jsonstring = jsonfile.substring(1, jsonfile.length -1);
+                data_act = JSON.parse(jsonstring);
+                var actual_data = JsonVisData(data_act, visdata, true);
+                // var newdata = newvis(data_act, visdata, true);
+                chart(actual_data, 'visualization');
+                // chart(newdata, 'VV');
+                document.getElementById("topicsLabel").style.display = "block"
+                document.getElementById("selectTopics").style.display = "block"
+                document.getElementById("legendText").style.display = "block"
+                document.getElementById("UpdateButton").style.display = "block"
+                document.getElementById("visualization").style.display = "block"
+                // document.getElementById("VV").style.display = "block"
+                // document.getElementById("tL").style.display = "block"
+            }
+
+            function csvJSON(csv){
+                var lines=csv.split("\n");
+                var result = [];
+                var headers=lines[0].split(",");
+                for(var i=1;i<lines.length;i++){
+                    var obj = {};
+                    var currentline=lines[i].split(",");
+                    for(var j=0;j<headers.length;j++){
+                        obj[headers[j]] = currentline[j];
+                    }
+                    result.push(obj);
+                }
+                return JSON.stringify(result); //JSON
+            }
+
+            async function updateGraph(){
+                var new_data_act = Array.from(data_act);
+                stringTopic.forEach(item => {
+                    new_data_act.forEach(row => {
+                        new_data_act=new_data_act.filter(function(itm){return itm.Topic!==item.substring(6,)});
+                    });
+                });
+                var actual_data = JsonVisData(new_data_act, visdata, false);
+                chart(actual_data);
+                return new_data_act;
+            }
+
+            async function getDataToJson(file){
+                const response = await fetch(file);
+                const data = await response.text();
+                var Json_data = csvJSON(data);
+                var JsonData = JSON.parse(Json_data);
+                return JsonData
+            }
+            
+            function JsonVisData(data_act1, visdata, checking){
+                labels = {};
+                visdata.clear();
+                data_act1.forEach(row => {
+                    if (row.Topic == '/cmd_vel'){ 
+                        const Dat = parseInt(row.Time.substring(0, 2));
+                        const Month = parseInt(row.Time.substring(3, 5));
+                        const Year = parseInt(row.Time.substring(6, 10));
+                        const Hour = parseInt(row.Time.substring(11, 13));
+                        const Min = parseInt(row.Time.substring(14, 16));
+                        const Sec = parseInt(row.Time.substring(17, 19));
+                        const Nsec = parseInt(row.Time.substring(20, 29));
+                        const Msec = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                        const DatE = parseInt(row.Time.substring(30, 32));
+                        const MonthE = parseInt(row.Time.substring(33, 35));
+                        const YearE = parseInt(row.Time.substring(36, 40));
+                        const HourE = parseInt(row.Time.substring(41, 43));
+                        const MinE = parseInt(row.Time.substring(44, 46));
+                        const SecE = parseInt(row.Time.substring(47, 49));
+                        const NsecE = parseInt(row.Time.substring(50,));
+                        const MsecE = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTimeE = new Date(YearE, MonthE-1, DatE, HourE, MinE, SecE, MsecE);
+                        const Topic = row.Topic;
+                        const Msg = row.Message;
+                        const Color = row.Color.replace(/\s/g,'');
+                        injectStyles(Color);
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        var items = [{start:DateTime, end:DateTimeE, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
+                    }else{
+                        const Dat = parseInt(row.Time.substring(0, 2));
+                        const Month = parseInt(row.Time.substring(3, 5));
+                        const Year = parseInt(row.Time.substring(6, 10));
+                        const Hour = parseInt(row.Time.substring(11, 13));
+                        const Min = parseInt(row.Time.substring(14, 16));
+                        const Sec = parseInt(row.Time.substring(17, 19));
+                        const Nsec = parseInt(row.Time.substring(20, ));
+                        const Msec = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                        const Topic = row.Topic;
+                        const Msg = row.Message;
+                        const Color = row.Color.replace(/\s/g,'');
+                        injectStyles(Color)
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
+                    }
+                });
+                if (checking == true){
+                    checkMain(checkbox_array);
+                }
+                return visdata;
+            }
+
+            function newvis(data_act1, visdata, checking){
+                labels = {};
+                visdata.clear();
+                data_act1.forEach(row => {
+                    const Topic = row.Topic;
+                    if (Topic == '/cmd_vel'){
+                        const Dat = parseInt(row.Time.substring(0, 2));
+                        const Month = parseInt(row.Time.substring(3, 5));
+                        const Year = parseInt(row.Time.substring(6, 10));
+                        const Hour = parseInt(row.Time.substring(11, 13));
+                        const Min = parseInt(row.Time.substring(14, 16));
+                        const Sec = parseInt(row.Time.substring(17, 19));
+                        const Nsec = parseInt(row.Time.substring(20, ));
+                        const Msec = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                        const Msg = row.Message;
+                        const Color = row.Color.replace(/\s/g,'');
+                        injectStyles(Color)
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
+                    }
+                });
+                if (checking == true){
+                    checkMain(checkbox_array);
+                }
+                return visdata;
+            }
+
+            function checkMain(checkbox_array){
+                document.getElementById('container').innerHTML = "";
+                checkbox_array = Array.from(new Set(checkbox_array))
+                checkbox_array.forEach(ele => {
+                    addCheckbox(ele.substring(6,));
+                });  
+            }
+
+            var options = {
+                editable: true
+            };
+
+            function chart(visdata, divID){
+                document.getElementById(divID).innerHTML = "";
+                var container = document.getElementById(divID);
+                timeline = new vis.Timeline(container, visdata, options);
+                colorize(labels);
+            }
+
+            function colorize(colorList) {
+                var container = document.getElementById('legend');
+                document.getElementById('legend').innerHTML = "";                
+                for (var key in colorList) {
+                    var boxContainer = document.createElement("DIV");
+                    var box = document.createElement("DIV");
+                    var label = document.createElement("SPAN");
+                    label.innerHTML = key;
+                    box.className = "box";
+                    box.style.backgroundColor = 'rgb' + colorList[key].substring(6,);
+
+                    boxContainer.appendChild(box);
+                    boxContainer.appendChild(label);
+                    container.appendChild(boxContainer);
+                }
+            }
+
+            function checkboxClick(){
+                stringTopic = [];
+                selectedTopic = []; 
+                checkbox_array.forEach(ele => {
+                    var checkBox = document.getElementById(ele);
+                    if (checkBox.checked == true){
+                        selectedTopic.push(ele)
+                    } else {                    
+                    }
+                });
+                stringTopic = checkbox_array.filter(function(obj) { return selectedTopic.indexOf(obj) == -1; });
+                return stringTopic;
+            }
+
+            function addCheckbox(Topic){    
+                var node = document.createElement('div');        
+                node.innerHTML = '<input type="checkbox" checked=true id="check_' + Topic + '" name="check' + Topic + '"onclick="checkboxClick()"><label for="check' + Topic + '">'+ Topic +'</label>';       
+                document.getElementById('container').appendChild(node);
+            }
+
+            function selectAll(){
+                var selectall = document.getElementById('selectall');
+                if (selectall.checked == true){
+                    checkbox_array.forEach(ele => {
+                        document.getElementById(ele).checked = true;
+                    });
+                } else {
+                    checkbox_array.forEach(ele => {
+                        document.getElementById(ele).checked = false;
+                    });            
+                }
+                checkboxClick();
+            }
+
+            function injectStyles(colors) {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                var classcolor = colors.replace('(', '').replace(')', '').replace(/,/g,'');
+                style.innerHTML = '.vis-item.' + classcolor + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: white; }';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+
+        </script>
+    </body>
+</html>
