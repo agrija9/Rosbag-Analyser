@@ -74,29 +74,9 @@
                     <p></p>
                     <button id="btnSubmit" onclick="uploadFunction()" type="submit" class="btn btn-default">Upload</button>
                 </form>
-
-                <!-- form id="form2" class="box_2" align="center" action="/about" method="POST">
-                    <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
-                </form -->
             </div>
         <p></p>
 
-        <div align = "center">
-        <p></p>
-            </div>
-            <div align="center" >
-                <form id="form2" class="box_2" align="center" action="/about" method="POST">
-                    <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
-                </form>
-            </div>
-        <p></p>
-
-        <script>
-                function aboutFunction() {
-                  document.getElementById("btnAbout").style.color = "black";
-                }
-        </script>
-       
         <script>
             async function uploadFunction(){
                 var bagfile =  String(document.getElementById("file_name").value);
@@ -140,4 +120,21 @@
     
     </body>
 
+    <body>
+        <p></p>
+            </div>
+            <div align="center" >
+                <form id="form2" class="box_2" align="center" action="/about" method="POST">
+                    <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
+                </form>
+            </div>
+        <p></p>
+
+        <script>
+            function aboutFunction() {
+              document.getElementById("btnAbout").style.color = "black";
+            }
+         </script>
+    </body>
+   
 </html>
