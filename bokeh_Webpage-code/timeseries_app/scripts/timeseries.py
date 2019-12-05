@@ -113,7 +113,6 @@ def histogram_tab(flights):
 		return p
 	
 	
-	
 	def update(attr, old, new):
 		carriers_to_plot = [carrier_selection.labels[i] for i in carrier_selection.active]
 		

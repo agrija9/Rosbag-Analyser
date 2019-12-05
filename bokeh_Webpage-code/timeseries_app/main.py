@@ -13,7 +13,7 @@ from scripts.timeseries import time_series_tab
 # from scripts.density import density_tab
 
 # Using included state data from Bokeh for map
-from bokeh.sampledata.us_states import data as states
+# from bokeh.sampledata.us_states import data as states
 
 # Read data into dataframes
 topics = pd.read_csv(join(dirname(__file__), 'data', 'Rosbag_Content.csv'), 

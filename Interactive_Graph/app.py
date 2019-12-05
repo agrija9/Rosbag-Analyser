@@ -13,17 +13,14 @@ import os
 
 myapp = Flask(__name__)
 
-# @myapp.route('/convert_time')
 def convert_time(tm, nsec):
     return time.strftime("%d %m %Y %H:%M:%S ", time.localtime(tm)) + str(nsec)
 
-# @myapp.route('/read_message')
 def read_message(msg):
     headers = msg.__slots__
     for i in headers:
         print(i + ' : ' + str(getattr(msg, i)))
 
-# @myapp.route('/bag_content')
 def bag_content(bag, df):
     df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
     for Topic, Msg, T in bag.read_messages(topics = bag.get_type_and_topic_info()[1].keys()):
@@ -38,7 +35,6 @@ def bag_content(bag, df):
     jsonfile =  df1.to_json(orient='records')
     return jsonfile
 
-# @myapp.route('/bag_info')
 def bag_info(bag):
     Start_Time = convert_time(bag.get_start_time(), (bag.get_start_time() - int(bag.get_start_time()))*10**9)
     End_Time = convert_time(bag.get_end_time(), (bag.get_end_time() - int(bag.get_end_time()))*10**9)
@@ -57,7 +53,6 @@ def bag_info(bag):
     df1 = df1.set_index('Topic')
     return df1
 
-# @myapp.route('/color_gen')
 def color_gen(n):
     ret = []
     r = int(random.uniform(0,1) * 256)
@@ -75,7 +70,7 @@ def color_gen(n):
         ret = list(dict.fromkeys(ret))
     return ret
 
-@myapp.route('/')
+@myapp.route("/", methods=["GET", "POST"])
 def index():
     return render_template('index.html')
 
@@ -90,16 +85,14 @@ def upload():
         os.remove(f.filename)
         return render_template('SDP_visualize.html',  jsonfile=jsonfile)
 
-# @myapp.route("/about", methods=['POST'])
-# def about():
-    # if request.method == 'POST':
-        # return render_template('about.html')
-
-@myapp.route("/about", methods=['POST'])
+@myapp.route("/about", methods=["GET", "POST"])
 def about():
     if request.method == "POST":
         return render_template("about.html")
-
+    
+    elif request.method == "GET":
+        return render_template("index.html")
+    
 
 if __name__ == '__main__':
     myapp.run(debug=True)

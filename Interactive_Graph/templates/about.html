@@ -33,15 +33,18 @@
         <div align = "center">
             <!--Normal text-->
             <p>This project performs a postmortem analysis of a ROS Bag ...</p> 
-            <p>TODO: Add full description</p> 
         </div>
 
-        <div class="column1" id="topicsLabel" style="display:none">
-            <div class="column2">
-                <h1 align = "center">testing</h1>
-                <div id="visualization" style="display:none"></div>
-            </div>
+        <div align="center" >
+            <form id="form2" class="box_2" align="center" action="/about" method="GET">
+                <button id="btnHome" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
+            </form>
         </div>
 
+        <script>
+            function homeFunction() {
+              document.getElementById("btnHome").style.color = "black";
+            }
+        </script>
     </body>
 </html>

@@ -57,6 +57,7 @@
         <p></p>
             </div>
             <div align="center" >
+                
                 <form id="form1" class="box_1" align="center" action="/upload" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <input id="file_name" type="file" name="file">
@@ -71,22 +72,42 @@
                             <p>Do not refresh the page!</p>
                         </div>
                     <p></p>
-                    <button id="btnSubmit" onclick="myFunction()" type="submit" class="btn btn-default">Upload</button>
-                    
+                    <button id="btnSubmit" onclick="uploadFunction()" type="submit" class="btn btn-default">Upload</button>
+                </form>
+
+                <!-- form id="form2" class="box_2" align="center" action="/about" method="POST">
+                    <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
+                </form -->
+            </div>
+        <p></p>
+
+        <div align = "center">
+        <p></p>
+            </div>
+            <div align="center" >
+                <form id="form2" class="box_2" align="center" action="/about" method="POST">
                     <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
                 </form>
             </div>
         <p></p>
+
+        <script>
+                function aboutFunction() {
+                  document.getElementById("btnAbout").style.color = "black";
+                }
+        </script>
        
         <script>
-            async function myFunction(){
+            async function uploadFunction(){
                 var bagfile =  String(document.getElementById("file_name").value);
-                if (bagfile.substring(bagfile.length - 4,bagfile.length) == ".bag"){
+                if (bagfile.substring(bagfile.length - 4, bagfile.length) == ".bag"){
                     document.getElementById("loader").style.display = "block";
                     document.getElementById("dropContainer").style.display = "none";
                     document.getElementById("file_name").style.display = "none";
                     document.getElementById("btnSubmit").style.display = "none";
-                }else{
+                }
+                
+                else{
                     document.getElementById("btnSubmit").disabled = true;
                     alert("The visualizer will only accept .bag files!");
                     await new Promise(resolve => setTimeout(resolve, 100));
