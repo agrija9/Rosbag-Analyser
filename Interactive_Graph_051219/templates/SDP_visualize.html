@@ -133,7 +133,7 @@
                 labels = {};
                 visdata.clear();
                 data_act1.forEach(row => {
-                    if (row.Topic == '/cmd_vel'){ 
+                    if (row.Time.toString().length > 30){ 
                         const Dat = parseInt(row.Time.substring(0, 2));
                         const Month = parseInt(row.Time.substring(3, 5));
                         const Year = parseInt(row.Time.substring(6, 10));
@@ -157,7 +157,7 @@
                         const Color = row.Color.replace(/\s/g,'');
                         injectStyles(Color);
                         var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
-                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Start Time : ' + DateTime.toString() + '</td></tr><tr><td>Stop Time : ' + DateTimeE.toString() + '</td></tr></table>';
                         var items = [{start:DateTime, end:DateTimeE, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
                         labels["  " + Topic] = Color;
                         visdata.add(items);

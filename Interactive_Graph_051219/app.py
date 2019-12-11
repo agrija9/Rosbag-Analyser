@@ -25,7 +25,10 @@ def read_message(msg):
 
 @app.route('/bag_content')
 def bag_content(bag, df):
+    topic_list = []
     df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
+    df2 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
+    df4 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])    
     for Topic, Msg, T in bag.read_messages(topics = bag.get_type_and_topic_info()[1].keys()):
         Time = convert_time(T.secs, T.nsecs)
         # if Topic ==  '/cmd_vel':
@@ -33,13 +36,33 @@ def bag_content(bag, df):
             data = Msg.data
             if type(data) == str and data != "" and len(data) < 50:
                 df1 = df1.append({'Time' : Time, 'Topic' : Topic, 'Message' : Msg.data, 'Color' : df.loc[Topic].Color} , ignore_index=True)
+            else:
+                df2 = df2.append({'Time' : Time, 'Topic' : Topic, 'Message' : Topic, 'Color' : df.loc[Topic].Color} , ignore_index=True)
+                topic_list.append(Topic)
         except:
             None
-    
-    df1 = df1.append({'Time' : '17 10 2019 19:37:19 190000000 17 10 2019 19:37:30 340000000', 'Topic' : '/cmd_vel', 'Message' : 'Something', 'Color' : 'color_(100,225,18)'} , ignore_index=True)
+        
+    topic_list = set(topic_list)
+    Start = ''
+    Stop = ''
+    for top in topic_list:
+        for i, j in df2.iterrows():
+            if j.Topic == top:
+                Start = j.Time
+                break
+        df3 = df2.iloc[::-1]
+        for i, j in df3.iterrows():
+            if j.Topic == top:
+                Stop = j.Time
+                break 
+        df4 = df4.append({'Time' : Start + ' ' + Stop, 'Topic' : top, 'Message' : top, 'Color' : df.loc[top].Color} , ignore_index=True)
 
-    jsonfile =  df1.to_json(orient='records')
-    df1.to_csv('Rosbag_Content.csv', index=True)
+    frames = [df1, df4]
+    result = pd.concat(frames)
+    # df1 = df1.append({'Time' : '17 10 2019 19:37:19 190000000 17 10 2019 19:37:30 340000000', 'Topic' : '/cmd_vel', 'Message' : 'Something', 'Color' : 'color_(100,225,18)'} , ignore_index=True)
+
+    jsonfile =  result.to_json(orient='records')
+    result.to_csv('Rosbag_Content.csv', index=True)
     return jsonfile
 
 @app.route('/bag_info')
@@ -59,7 +82,7 @@ def bag_info(bag):
         df1 = df1.append({'Topic' : j, 'Color': colors[idx],'Message' : msgs[idx].msg_type, 'Count' : msgs[idx].message_count, 'Connections' : msgs[idx].connections, 'Frequency' : msgs[idx].frequency}, ignore_index=True)
 
     df1 = df1.set_index('Topic')
-    df1.to_csv('Rosbag_Info.csv', index=True)
+    # df1.to_csv('Rosbag_Info.csv', index=True)
     return df1
 
 @app.route('/color_gen')
