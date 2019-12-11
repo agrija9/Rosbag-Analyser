@@ -157,7 +157,7 @@
                         const Color = row.Color.replace(/\s/g,'');
                         injectStyles(Color);
                         var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
-                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Start Time : ' + DateTime.toString() + '</td></tr><tr><td>Stop Time : ' + DateTimeE.toString() + '</td></tr></table>';
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Start Time : ' + row.Time.substring(0, 29) + '</td></tr><tr><td>Stop Time : ' + row.Time.substring(30, ) + '</td></tr></table>';
                         var items = [{start:DateTime, end:DateTimeE, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
                         labels["  " + Topic] = Color;
                         visdata.add(items);
