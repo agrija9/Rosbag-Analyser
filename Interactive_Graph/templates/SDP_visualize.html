@@ -45,10 +45,19 @@
         </div>
         <p></p>
         <div class="row">
+
             <div class="column">
                 <p id="legendText" style="display:none">Legends :</p>
                 <div id="legend"></div>
+                <p></p>
+                
+                <div>
+                    <form id="form2" class="box_2" align="center" action="/" method="GET">
+                        <button id="btnHome" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
+                    </form>
+                </div>
             </div>
+
             <div class="column">
                 <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> select all</label></p>
                 <div id="container"></div>
@@ -229,6 +238,10 @@
                 var classcolor = colors.replace('(', '').replace(')', '').replace(/,/g,'');
                 style.innerHTML = '.vis-item.' + classcolor + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: white; }';
                 document.getElementsByTagName('head')[0].appendChild(style);
+            }
+
+            function homeFunction() {
+              document.getElementById("btnHome").style.color = "black";
             }
 
         </script>

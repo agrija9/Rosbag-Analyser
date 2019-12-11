@@ -1,7 +1,5 @@
 from app import myapp
 import json
-# from flask_testing import TestCase
-# from Interactive_Graph import app
 import unittest
 
 # set our application to testing mode

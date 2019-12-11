@@ -3,6 +3,11 @@
     <head>
         <title>About the project</title>
         <link rel="stylesheet" href="/static/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style type="text/css">
 
             .column1 {
@@ -30,21 +35,15 @@
 
     <body>
         <h1 align="center">Project details</h1>
+        <!-- <img src="static/logo.jpg" alt="image" class="w3-image w3-greyscale" style="width:50%;margin-top:48px"> -->
         <div align = "center">
             <!--Normal text-->
             <p>This project performs a postmortem analysis of a ROS Bag ...</p> 
         </div>
 
-        <div align="center" >
-            <form id="form2" class="box_2" align="center" action="/about" method="GET">
-                <button id="btnHome" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
-            </form>
-        </div>
+        <div class='w3-center'>
+            <a href="/" class="w3-button w3-light-grey"><i class="fa fa-home"></i>Home</a>
+          </div>
 
-        <script>
-            function homeFunction() {
-              document.getElementById("btnHome").style.color = "black";
-            }
-        </script>
     </body>
 </html>
