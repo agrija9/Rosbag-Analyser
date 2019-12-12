@@ -27,6 +27,27 @@ git clone https://github.com/agrija9/Software-Development-Project.git
 pip install -r requirements.txt
 ```
 
+## Run
+
+Open a terminal. Activate ROS environment. Go to repository folder and open "Interactive_graph" folder
+
+```
+python3 app.py
+```
+
+## Test
+
+To run unit tests run
+
+```
+python3 test_app.py
+```
+
+## Built With
+
+* [Flask](https://www.palletsprojects.com/p/flask/) - The web framework used
+* [visjs](https://visjs.org/) - Dependency Management
+
 ##  Contributors 
 
 - Alan Preciado Grijalva
