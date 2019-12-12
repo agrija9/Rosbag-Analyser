@@ -4,3 +4,4 @@ Flask==1.1.1
 gevent==1.4.0
 pandas==0.24.2
 flask_testing==0.7.1
+pyrosbag==0.1.3
