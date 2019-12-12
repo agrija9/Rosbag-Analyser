@@ -7,6 +7,7 @@
 
 - TODO: Add description
 - TODO: Add gif of timeline showing example of usage
+- TODO: Add travis build
 
 ## Prerequisites
 
@@ -72,4 +73,4 @@ python3 test_app.py
 
 ## Contributions
 
-- Add coding guidelines
+- TODO: Add coding guidelines
