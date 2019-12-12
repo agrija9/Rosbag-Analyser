@@ -1,7 +1,7 @@
 # Post-mortem Analysis of ROS Bag File
 
 - TODO: Add description
-- TODO: Add gif of timeline
+- TODO: Add gif of timeline showing example of usage
 
 ## Prerequisites
 
@@ -35,6 +35,8 @@ Open a terminal. Activate ROS environment. Go to repository folder and open "Int
 python3 app.py
 ```
 
+TODO: Add images step by step of usage...
+
 ## Test
 
 To run unit tests run
@@ -48,7 +50,7 @@ python3 test_app.py
 * [Flask](https://www.palletsprojects.com/p/flask/) - The web framework used
 * [visjs](https://visjs.org/) - Dependency Management
 
-##  Contributors 
+##  Authors 
 
 - Alan Preciado Grijalva
 - Ragith Ayyappan Kutty
