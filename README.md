@@ -2,7 +2,12 @@
 
 ## Project Description
 
-Material Related to the Software Development Project course at H-BRS. Theory and Practice. 
+TODO: Add gif of timeline
+TODO: Add project description
+
+## Installation
+
+pip install -r requirements.txt
 
 ##  Contributors 
 
@@ -12,13 +17,7 @@ Material Related to the Software Development Project course at H-BRS. Theory and
 
 - Shravanthi Arvind Patil 
 
-## Working with git 
 
-- git clone (address of repository)
-- make changes in your local repository 
-- git add changes
-- git commit 
-- git push origin/master
 
 ## License
 
