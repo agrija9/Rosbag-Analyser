@@ -4,22 +4,28 @@ One Paragraph of project description goes here
 
 - TODO: Add gif of timeline
 
-### Prerequisites
+## Prerequisites
 
-What things you need to install the software and how to install them
+Software needed to run this repository
 
-```
-Give examples
-```
-
-## Requirements
-
-- Python 3.6
-- ROS Kinetic
+Python 3.6
+[Ubuntu 16.04](https://ubuntu.com/download/desktop)
+[ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
 
+### Clone
+
+Clone this repository in you local machine
+```
+git clone https://github.com/agrija9/Software-Development-Project.git
+```
+
+### Setup
+
+```
 pip install -r requirements.txt
+```
 
 ##  Contributors 
 
@@ -28,8 +34,11 @@ pip install -r requirements.txt
 - Devaiah Ulliyada Arun
 - Shravanthi Arvind Patil 
 
-
-
 ## License
 
-## Coding guidelines
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+
+## Contributions
+
+- Add coding guidelines
