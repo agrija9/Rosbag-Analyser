@@ -1,22 +1,22 @@
 # Post-mortem Analysis of ROS Bag File
 
-One Paragraph of project description goes here
-
+- TODO: Add description
 - TODO: Add gif of timeline
 
 ## Prerequisites
 
-Software needed to run this repository
+Software needed to run this repository:
 
-Python 3.6
-[Ubuntu 16.04](https://ubuntu.com/download/desktop)
-[ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+- Python 3.6
+- [Ubuntu 16.04](https://ubuntu.com/download/desktop)
+- [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
 
 ### Clone
 
 Clone this repository in you local machine
+
 ```
 git clone https://github.com/agrija9/Software-Development-Project.git
 ```
