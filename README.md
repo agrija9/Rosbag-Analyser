@@ -1,9 +1,22 @@
-# Post-mortem analysis of ROS bag file
+# Post-mortem Analysis of ROS Bag File
 
-## Project Description
+One Paragraph of project description goes here
 
-TODO: Add gif of timeline
-TODO: Add project description
+- TODO: Add gif of timeline
+- TODO: Add project description
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+Give examples
+```
+
+## Requirements
+
+- Python 3.6
+- ROS Kinetic
 
 ## Installation
 
@@ -14,7 +27,6 @@ pip install -r requirements.txt
 - Alan Preciado Grijalva
 - Ragith Ayyappan Kutty
 - Devaiah Ulliyada Arun
-
 - Shravanthi Arvind Patil 
 
 
