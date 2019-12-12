@@ -3,7 +3,6 @@
 One Paragraph of project description goes here
 
 - TODO: Add gif of timeline
-- TODO: Add project description
 
 ### Prerequisites
 
