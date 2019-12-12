@@ -64,7 +64,7 @@ python3 test_app.py
 
 - [Alan Preciado Grijalva](https://github.com/agrija9)
 - [Ragith Ayyappan Kutty](https://github.com/rkutty1)
-- [Devaiah Ulliyada] Arun(https://github.com/divindevaiah)
+- [Devaiah Ulliyada Arun](https://github.com/divindevaiah)
 - [Shravanthi Arvind Patil](https://github.com/ShravanthiPatil)
 
 ## License
