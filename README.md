@@ -34,9 +34,13 @@ pip install -r requirements.txt
 
 ## Run
 
-Open a terminal. Activate ROS environment. Go to repository folder and open "Interactive_graph" folder
+Open a terminal. 
+
+Activate ROS environment. 
 
 ```
+cd "repository folder"
+cd Interactive_graph
 python3 app.py
 ```
 
@@ -53,7 +57,7 @@ python3 test_app.py
 ## Built With
 
 * [Flask](https://www.palletsprojects.com/p/flask/) - The web framework used
-* [visjs](https://visjs.org/) - Dependency Management
+* [visjs](https://visjs.org/) - Interactive timeline in browser
 
 ##  Authors 
 
