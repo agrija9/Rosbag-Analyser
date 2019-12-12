@@ -1,3 +1,5 @@
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
 # Post-mortem Analysis of ROS Bag File
 
 - TODO: Add description
@@ -59,7 +61,6 @@ python3 test_app.py
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 
 ## Contributions
