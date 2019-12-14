@@ -19,7 +19,7 @@ def bag_content(bag, df):
         Time = convert_time(T.secs, T.nsecs)
         try:
             data = Msg.data
-            if type(data) == str and data != "" and len(data) < 50:
+            if type(data) == str and (data == 'e_start' or data == 'e_stop' or data == 'e_stopped' or data == 'e_success'):
                 df1 = df1.append({'Time' : Time, 'Topic' : Topic, 'Message' : Msg.data, 'Color' : df.loc[Topic].Color} , ignore_index=True)
         except:
             None

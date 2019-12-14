@@ -45,19 +45,16 @@
         </div>
         <p></p>
         <div class="row">
-
             <div class="column">
                 <p id="legendText" style="display:none">Legends :</p>
                 <div id="legend"></div>
                 <p></p>
-                
                 <div>
                     <form id="form2" class="box_2" align="center" action="/" method="GET">
-                        <button id="btnHome" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
+                        <button id="btnHome" style="display:none" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
                     </form>
                 </div>
             </div>
-
             <div class="column">
                 <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> select all</label></p>
                 <div id="container"></div>
@@ -85,13 +82,14 @@
                 var jsonstring = jsonfile.substring(1, jsonfile.length -1)
                 data_act = JSON.parse(jsonstring);
                 var actual_data = JsonVisData(data_act, visdata, true);
-                chart(actual_data);
-              
+                chart(actual_data, 'visualization');
                 document.getElementById("topicsLabel").style.display = "block"
                 document.getElementById("selectTopics").style.display = "block"
                 document.getElementById("legendText").style.display = "block"
-                document.getElementById("UpdateButton").style.display = "block"                
-                document.getElementById("visualization").style.display = "block"                
+                document.getElementById("UpdateButton").style.display = "block"
+                document.getElementById("btnHome").style.display = "block"
+                document.getElementById("visualization").style.display = "block"
+
             }
 
             function csvJSON(csv){
@@ -132,91 +130,46 @@
             function JsonVisData(data_act1, visdata, checking){
                 labels = {};
                 visdata.clear();
-                /* data_act1.forEach(row => {
-                    const Dat = parseInt(row.Time.substring(0, 2));
-                    const Month = parseInt(row.Time.substring(3, 5));
-                    const Year = parseInt(row.Time.substring(6, 10));
-                    const Hour = parseInt(row.Time.substring(11, 13));
-                    const Min = parseInt(row.Time.substring(14, 16));
-                    const Sec = parseInt(row.Time.substring(17, 19));
-                    const Nsec = parseInt(row.Time.substring(20, ));
+                data_act1.forEach(row => {
+                    Date_split = row.Time.split(" ");
+                    Time_split = Date_split[3].split(":");
+                    const Dat = parseInt(Date_split[0]);
+                    const Month = parseInt(Date_split[1]);
+                    const Year = parseInt(Date_split[2]);
+                    const Hour = parseInt(Time_split[0]);
+                    const Min = parseInt(Time_split[1]);
+                    const Sec = parseInt(Time_split[2]);
+                    const Nsec = parseInt(Date_split[4]);
                     const Msec = parseInt(Nsec/Math.pow(10, 6));
                     const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
-                    
                     const Topic = row.Topic;
-                    const Msg = row.Message;
+                    const Msg = row.Message.trim();
                     const Color = row.Color.replace(/\s/g,'');
-                    injectStyles(Color)
-                    var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
-                    const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
-                    
-                    var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
-                    labels["  " + Topic] = Color;
-                    
-                    visdata.add(items);
-                    if (checking == true){
-                        checkbox_array.push("check_" + Topic);
-                    } */
-                data_act1.forEach(row => {
-                    if (row.Topic == '/cmd_vel'){
-                        // message start
-                        const Dat = parseInt(row.Time.substring(0, 2));
-                        const Month = parseInt(row.Time.substring(3, 5));
-                        const Year = parseInt(row.Time.substring(6, 10));
-                        const Hour = parseInt(row.Time.substring(11, 13));
-                        const Min = parseInt(row.Time.substring(14, 16));
-                        const Sec = parseInt(row.Time.substring(17, 19));
-                        const Nsec = parseInt(row.Time.substring(20, 29));
-                        const Msec = parseInt(Nsec/Math.pow(10, 6));
-                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
-                        
-                        // message end (what is the 30 length between strings?)
-                        const DatE = parseInt(row.Time.substring(15, 17));
-                        const MonthE = parseInt(row.Time.substring(18, 20));
-                        const YearE = parseInt(row.Time.substring(21, 25));
-                        const HourE = parseInt(row.Time.substring(26, 28));
-                        const MinE = parseInt(row.Time.substring(29, 31));
-                        const SecE = parseInt(row.Time.substring(32, 34));
-                        const NsecE = parseInt(row.Time.substring(35,));
-                        const MsecE = parseInt(Nsec/Math.pow(10, 6));
-                        const DateTimeE = new Date(YearE, MonthE-1, DatE, HourE, MinE, SecE, MsecE);
-                        
-                        // add info to each point
-                        const Topic = row.Topic;
-                        const Msg = row.Message;
-                        const Color = row.Color.replace(/\s/g,'');
-                        injectStyles(Color);
+                    if (Msg == 'e_stopped' || Msg == 'e_stop'){
+                        injectStyles(Color, 'circle')
                         var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
-                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
-                        
-                        // sets start and end of bar
-                        var items = [{start:DateTime, end:DateTimeE, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + Dat + "/" + Month + "/" + Year + " " + Date_split[3] + " " + Nsec + '</td></tr></table>';
+                        var items = [{start:DateTime, content: '', className: classcolor + '_circle', title: Title, selectable: true, editable:{remove:false}}];
                         labels["  " + Topic] = Color;
                         visdata.add(items);
                         if (checking == true){
                             checkbox_array.push("check_" + Topic);
                         }
-                    }
-                    
-                    else{
-                        const Dat = parseInt(row.Time.substring(0, 2));
-                        const Month = parseInt(row.Time.substring(3, 5));
-                        const Year = parseInt(row.Time.substring(6, 10));
-                        const Hour = parseInt(row.Time.substring(11, 13));
-                        const Min = parseInt(row.Time.substring(14, 16));
-                        const Sec = parseInt(row.Time.substring(17, 19));
-                        const Nsec = parseInt(row.Time.substring(20, ));
-                        const Msec = parseInt(Nsec/Math.pow(10, 6));
-
-                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
-                        const Topic = row.Topic;
-                        const Msg = row.Message;
-                        const Color = row.Color.replace(/\s/g,'');
-                        injectStyles(Color)
+                    }else if (Msg == 'e_start'){
+                        injectStyles(Color, 'square')
                         var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
-                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
-                        
-                        var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + Dat + "/" + Month + "/" + Year + " " + Date_split[3] + " " + Nsec + '</td></tr></table>';
+                        var items = [{start:DateTime, content: '', className: classcolor + '_square', title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
+                    }else if (Msg == 'e_success'){
+                        injectStyles(Color, 'oval')
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + Dat + "/" + Month + "/" + Year + " " + Date_split[3] + " " + Nsec + '</td></tr></table>';
+                        var items = [{start:DateTime, content: '.', className: classcolor + '_oval', title: Title, selectable: true, editable:{remove:false}}];
                         labels["  " + Topic] = Color;
                         visdata.add(items);
                         if (checking == true){
@@ -237,15 +190,17 @@
                     addCheckbox(ele.substring(6,));
                 });  
             }
-
             var options = {
                 editable: true
             };
 
-            function chart(visdata){
-                // create the timeline
-                document.getElementById('visualization').innerHTML = "";
-                var container = document.getElementById("visualization");
+            function chart(visdata, divID){
+                // Creates timeline graph
+                document.getElementById(divID).innerHTML = "";
+                var container = document.getElementById(divID);
+                var options = {
+                    editable: true
+                };
                 timeline = new vis.Timeline(container, visdata, options);
                 colorize(labels);
             }
@@ -301,12 +256,20 @@
                 checkboxClick();
             }
 
-            function injectStyles(colors) {
+            function injectStyles(colors, shape) {
                 var style = document.createElement('style');
                 style.type = 'text/css';
                 var classcolor = colors.replace('(', '').replace(')', '').replace(/,/g,'');
-                style.innerHTML = '.vis-item.' + classcolor + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: white; }';
-                document.getElementsByTagName('head')[0].appendChild(style);
+                if (shape == 'circle'){
+                    style.innerHTML = '.vis-item.' + classcolor + '_circle' + '{ background-color: rgb'+ colors.substring(6,) + '; border-radius: 50%; border-color: black; color: white; }';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                }else if (shape == 'square'){
+                    style.innerHTML = '.vis-item.' + classcolor + '_square' + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: white; }';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                }else if (shape == 'oval'){
+                    style.innerHTML = '.vis-item.' + classcolor + '_oval' + '{ background-color: rgb'+ colors.substring(6,) + '; border-color: black; color: rgb'+ colors.substring(6,) + '; }';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                }
             }
 
             function homeFunction() {

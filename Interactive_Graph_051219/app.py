@@ -25,10 +25,7 @@ def read_message(msg):
 
 @app.route('/bag_content')
 def bag_content(bag, df):
-    topic_list = []
     df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
-    df2 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
-    df4 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])    
     for Topic, Msg, T in bag.read_messages(topics = bag.get_type_and_topic_info()[1].keys()):
         Time = convert_time(T.secs, T.nsecs)
         try:
@@ -39,7 +36,7 @@ def bag_content(bag, df):
             None
 
     jsonfile =  df1.to_json(orient='records')
-    df1.to_csv('Rosbag_Content.csv', index=True)
+    # df1.to_csv('Rosbag_Content.csv', index=True)
     return jsonfile
 
 @app.route('/bag_info')
