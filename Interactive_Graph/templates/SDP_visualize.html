@@ -70,9 +70,9 @@
         <p></p>
 
         <script type="text/javascript">
-            
+            // Here is where the timeline is created
             var data_act;
-            var visdata = new vis.DataSet();
+            var visdata = new vis.DataSet(); // vis dataset
             var checkbox_array = [];
             var labels = {};
             var stringTopic = [];
@@ -132,7 +132,7 @@
             function JsonVisData(data_act1, visdata, checking){
                 labels = {};
                 visdata.clear();
-                data_act1.forEach(row => {
+                /* data_act1.forEach(row => {
                     const Dat = parseInt(row.Time.substring(0, 2));
                     const Month = parseInt(row.Time.substring(3, 5));
                     const Year = parseInt(row.Time.substring(6, 10));
@@ -142,17 +142,86 @@
                     const Nsec = parseInt(row.Time.substring(20, ));
                     const Msec = parseInt(Nsec/Math.pow(10, 6));
                     const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                    
                     const Topic = row.Topic;
                     const Msg = row.Message;
                     const Color = row.Color.replace(/\s/g,'');
                     injectStyles(Color)
                     var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
                     const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                    
                     var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
                     labels["  " + Topic] = Color;
+                    
                     visdata.add(items);
                     if (checking == true){
                         checkbox_array.push("check_" + Topic);
+                    } */
+                data_act1.forEach(row => {
+                    if (row.Topic == '/cmd_vel'){
+                        // message start
+                        const Dat = parseInt(row.Time.substring(0, 2));
+                        const Month = parseInt(row.Time.substring(3, 5));
+                        const Year = parseInt(row.Time.substring(6, 10));
+                        const Hour = parseInt(row.Time.substring(11, 13));
+                        const Min = parseInt(row.Time.substring(14, 16));
+                        const Sec = parseInt(row.Time.substring(17, 19));
+                        const Nsec = parseInt(row.Time.substring(20, 29));
+                        const Msec = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                        
+                        // message end (what is the 30 length between strings?)
+                        const DatE = parseInt(row.Time.substring(15, 17));
+                        const MonthE = parseInt(row.Time.substring(18, 20));
+                        const YearE = parseInt(row.Time.substring(21, 25));
+                        const HourE = parseInt(row.Time.substring(26, 28));
+                        const MinE = parseInt(row.Time.substring(29, 31));
+                        const SecE = parseInt(row.Time.substring(32, 34));
+                        const NsecE = parseInt(row.Time.substring(35,));
+                        const MsecE = parseInt(Nsec/Math.pow(10, 6));
+                        const DateTimeE = new Date(YearE, MonthE-1, DatE, HourE, MinE, SecE, MsecE);
+                        
+                        // add info to each point
+                        const Topic = row.Topic;
+                        const Msg = row.Message;
+                        const Color = row.Color.replace(/\s/g,'');
+                        injectStyles(Color);
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        
+                        // sets start and end of bar
+                        var items = [{start:DateTime, end:DateTimeE, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
+                    }
+                    
+                    else{
+                        const Dat = parseInt(row.Time.substring(0, 2));
+                        const Month = parseInt(row.Time.substring(3, 5));
+                        const Year = parseInt(row.Time.substring(6, 10));
+                        const Hour = parseInt(row.Time.substring(11, 13));
+                        const Min = parseInt(row.Time.substring(14, 16));
+                        const Sec = parseInt(row.Time.substring(17, 19));
+                        const Nsec = parseInt(row.Time.substring(20, ));
+                        const Msec = parseInt(Nsec/Math.pow(10, 6));
+
+                        const DateTime = new Date(Year, Month-1, Dat, Hour, Min, Sec, Msec);
+                        const Topic = row.Topic;
+                        const Msg = row.Message;
+                        const Color = row.Color.replace(/\s/g,'');
+                        injectStyles(Color)
+                        var classcolor = Color.replace('(', '').replace(')', '').replace(/,/g,'');
+                        const Title = '<table border="1"><tr><td>Topic : '+ Topic + '</td></tr><tr><td>Message : ' + Msg + '</td></tr><tr><td>Timestamp : ' + row.Time + '</td></tr></table>';
+                        
+                        var items = [{start:DateTime, content: "", className: classcolor, title: Title, selectable: true, editable:{remove:false}}];
+                        labels["  " + Topic] = Color;
+                        visdata.add(items);
+                        if (checking == true){
+                            checkbox_array.push("check_" + Topic);
+                        }
                     }
                 });
                 if (checking == true){
