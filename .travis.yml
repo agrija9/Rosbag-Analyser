@@ -14,4 +14,4 @@ install:
 # command to run tests
 script:
   # - pytest
-  - python3 test_app.py
+  - python3 Interactive_Graph/test_app.py
