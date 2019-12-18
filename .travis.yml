@@ -12,6 +12,6 @@ python:
 install:
   - pip install -r requirements.txt
 # command to run tests
-script:
+#script:
   # - pytest
-  - python3 Interactive_Graph/test_app.py
+#  - python3 Interactive_Graph/test_app.py
