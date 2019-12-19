@@ -5,16 +5,14 @@
 
 # Post-mortem Analysis of ROS Bag File
 
-- TODO: Add description
-- TODO: Add gif of timeline showing example of usage
-- TODO: Add travis build
+This tool visualizes the topics and corresponding messages of a RosBag file in the form of a timeline. The timeline is an interactive graph that allows to zoom in/out and select specific topics.
 
 ## Prerequisites
 
 Software needed to run this repository:
 
-- Python 3.6
 - [Ubuntu 16.04](https://ubuntu.com/download/desktop)
+- Python 3.6
 - [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
@@ -40,8 +38,8 @@ Open a terminal.
 Activate ROS environment. 
 
 ```
-cd "repository folder"
-cd Interactive_graph
+cd Software-Development-Project/
+cd Interactive_graph/
 python3 app.py
 ```
 
@@ -49,7 +47,7 @@ TODO: Add images step by step of usage...
 
 ## Test
 
-To run unit tests run
+For unit testing run
 
 ```
 python3 test_app.py
@@ -57,7 +55,7 @@ python3 test_app.py
 
 ## Built With
 
-* [Flask](https://www.palletsprojects.com/p/flask/) - The web framework used
+* [Flask](https://www.palletsprojects.com/p/flask/) - Web framework
 * [visjs](https://visjs.org/) - Interactive timeline in browser
 
 ##  Authors 
@@ -73,4 +71,9 @@ python3 test_app.py
 
 ## Contributions
 
-- TODO: Add coding guidelines
+- PEP 8
+
+## TODO
+
+- Travis build
+- GIF in description
