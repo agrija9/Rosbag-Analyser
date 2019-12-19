@@ -12,7 +12,7 @@ This tool visualizes the topics and corresponding messages of a RosBag file in t
 Software needed to run this repository:
 
 - [Ubuntu 16.04](https://ubuntu.com/download/desktop)
-- Python 3.6
+- Python 2.7
 - [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
