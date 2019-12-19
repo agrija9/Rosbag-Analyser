@@ -73,4 +73,4 @@ python3 test_app.py
 
 - Travis build
 - GIF in description
-- Add images step by step of usage
+- Add use example (images)
