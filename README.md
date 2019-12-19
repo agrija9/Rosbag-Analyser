@@ -25,17 +25,17 @@ git clone https://github.com/agrija9/Software-Development-Project.git
 
 ### Setup
 
+Install packages in home directory (no need of root privileges)
+
 ```
-pip2 install --user -r requirements.txt (install packages in home directory without needing root privileges)
+pip2 install --user -r requirements.txt
 ```
 
 ## Run
 
-Open a terminal. 
-
-Activate ROS environment. 
-
 ```
+Open a terminal
+Activate ROS environment
 cd Software-Development-Project/
 cd Interactive_graph/
 python3 app.py
@@ -74,4 +74,3 @@ python3 test_app.py
 - Travis build
 - GIF in description
 - Add images step by step of usage
-
