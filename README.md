@@ -1,18 +1,16 @@
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Build Status](https://travis-ci.org/agrija9/Software-Development-Project.svg?branch=master)](https://travis-ci.org/agrija9/Software-Development-Project)
 
-
-
 # Post-mortem Analysis of ROS Bag File
 
-This tool visualizes the topics and corresponding messages of a RosBag file in the form of a timeline. The timeline is an interactive graph that allows to zoom in/out and select specific topics.
+This tool plots the topics of a RosBag file as a timeline. The timeline graph runs as an interactive web application that allows to select topics at ease and shows their corresponding messages and timestamps.
 
 ## Prerequisites
 
 Software needed to run this repository:
 
 - [Ubuntu 16.04](https://ubuntu.com/download/desktop)
-- Python 2.7
+- Python 2.7 / 3.6
 - [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
@@ -28,7 +26,7 @@ git clone https://github.com/agrija9/Software-Development-Project.git
 ### Setup
 
 ```
-pip install -r requirements.txt
+pip2 install --user -r requirements.txt (install packages in home directory without needing root privileges)
 ```
 
 ## Run
@@ -42,8 +40,6 @@ cd Software-Development-Project/
 cd Interactive_graph/
 python3 app.py
 ```
-
-TODO: Add images step by step of usage...
 
 ## Test
 
@@ -77,3 +73,5 @@ python3 test_app.py
 
 - Travis build
 - GIF in description
+- Add images step by step of usage
+
