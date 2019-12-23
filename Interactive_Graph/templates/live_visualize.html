@@ -36,6 +36,7 @@
         <h1 align="center">ROS LIVE VISUALIZER</h1>
         <div align = "center">
             <p></p>
+            <button id="LIVE" style="display:block" align="center">LIVE</button>
         </div>
         <p></p>
         <div class="column1" id="topicsLabel" style="display:none">
@@ -92,8 +93,11 @@
                     }
 
                 }
-                _update_time();
-
+                $('#LIVE').on('click', function() {
+                    document.getElementById("LIVE").style.display = "none";
+                    _update_time();
+                });
+                
                 socket.on('message', function(msg) {
                     mainFunc(msg);
                 });

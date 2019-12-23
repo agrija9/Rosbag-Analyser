@@ -4,6 +4,7 @@ from gevent.pywsgi import WSGIServer
 from werkzeug import secure_filename
 import rosbag
 import os
+import sys
 from utils import bag_content, bag_info, color_gen, convert_time
 import rospy
 import numpy as np
@@ -21,12 +22,19 @@ import random
 myapp = Flask(__name__)
 socketio = SocketIO(myapp)
 
+reset = 0
 count = 1
 df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
 df2 = pd.DataFrame(columns = ['Topic', 'Color'])
 
 @myapp.route("/", methods=["GET", "POST"])
 def index():
+    global reset
+    if reset == 1:
+        time.sleep(1)
+        os.execl(sys.executable, *([sys.executable]+sys.argv))
+        time.sleep(1)
+    reset = 1
     return render_template('index.html')
 
 @myapp.route("/team", methods=["GET", "POST"])
@@ -37,7 +45,6 @@ def team():
 def live():
     x = threading.Thread(target=check_master, args=(False,))
     x.start()
-
     return render_template('live_visualize.html')
 
 @myapp.route("/upload", methods=["GET", "POST"])
