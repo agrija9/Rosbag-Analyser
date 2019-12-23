@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rosbag analyzer</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="/static/styles.css">
+        <style type="text/css">
+
+            .column1 {
+                border: 2px solid rgb(116, 109, 109);
+                border-radius: 10px;
+                /* Should be removed. Only for demonstration */
+            }
+
+            .column2 {
+                padding: 10px;
+                margin: 10px;
+
+                /* Should be removed. Only for demonstration */
+            }
+
+                /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var socket = io.connect('http://127.0.0.1:5000');
+
+                function _update_time(){
+                    socket.send('Data');
+                    setTimeout(() => {  
+                        _update_time();
+                    }, 5000);
+                }
+                _update_time();
+
+                // socket.on('connect', function() {
+                //     socket.send('User has connected!');
+                // });
+
+                socket.on('message', function(msg) {
+                    // $("#messages").append('<li>'+msg+'</li>');
+                    document.getElementById("demo").innerHTML = msg;
+                    // console.log(msg);
+                });
+
+                $('#sendbutton').on('click', function() {
+                    socket.send($('#myMessage').val());
+                    $('#myMessage').val('');
+                });
+            });
+
+        </script>
+        <h1 id="demo">Time</h1>
+        <ul id="messages"></ul>
+        <input type="text" id="myMessage">
+        <button id="sendbutton">Send</button>
+
+    </body>
+</html>

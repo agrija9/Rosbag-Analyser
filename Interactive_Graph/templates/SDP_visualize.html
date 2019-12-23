@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Rosbag analyzer</title>
+        <title>Rosbag Analyzer</title>
         <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script>
         <link href="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="/static/styles.css">
@@ -79,35 +79,19 @@
             async function mainFunc(){
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 var jsonfile = '{{ jsonfile|tojson|safe }}';
-                var jsonstring = jsonfile.substring(1, jsonfile.length -1)
+                var jsonstring = jsonfile.substring(1, jsonfile.length -1);
                 data_act = JSON.parse(jsonstring);
                 var actual_data = JsonVisData(data_act, visdata, true);
                 chart(actual_data, 'visualization');
-                document.getElementById("topicsLabel").style.display = "block"
-                document.getElementById("selectTopics").style.display = "block"
-                document.getElementById("legendText").style.display = "block"
-                document.getElementById("UpdateButton").style.display = "block"
-                document.getElementById("btnHome").style.display = "block"
-                document.getElementById("visualization").style.display = "block"
-
+                document.getElementById("topicsLabel").style.display = "block";
+                document.getElementById("selectTopics").style.display = "block";
+                document.getElementById("legendText").style.display = "block";
+                document.getElementById("UpdateButton").style.display = "block";
+                document.getElementById("btnHome").style.display = "block";
+                document.getElementById("visualization").style.display = "block";
             }
 
-            function csvJSON(csv){
-                var lines=csv.split("\n");
-                var result = [];
-                var headers=lines[0].split(",");
-                for(var i=1;i<lines.length;i++){
-                    var obj = {};
-                    var currentline=lines[i].split(",");
-                    for(var j=0;j<headers.length;j++){
-                        obj[headers[j]] = currentline[j];
-                    }
-                    result.push(obj);
-                }
-                return JSON.stringify(result); //JSON
-            }
-
-            async function updateGraph(){
+            function updateGraph(){
                 var new_data_act = Array.from(data_act);
                 stringTopic.forEach(item => {
                     new_data_act.forEach(row => {
@@ -115,16 +99,8 @@
                     });
                 });
                 var actual_data = JsonVisData(new_data_act, visdata, false);
-                chart(actual_data);
+                chart(actual_data, 'visualization');
                 return new_data_act;
-            }
-
-            async function getDataToJson(file){
-                const response = await fetch(file);
-                const data = await response.text();
-                var Json_data = csvJSON(data);
-                var JsonData = JSON.parse(Json_data);
-                return JsonData
             }
             
             function JsonVisData(data_act1, visdata, checking){
