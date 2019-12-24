@@ -22,19 +22,19 @@ import random
 myapp = Flask(__name__)
 socketio = SocketIO(myapp)
 
-reset = 0
 count = 1
 df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
 df2 = pd.DataFrame(columns = ['Topic', 'Color'])
 
+def resets():
+    time.sleep(1)
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+
 @myapp.route("/", methods=["GET", "POST"])
 def index():
-    global reset
-    if reset == 1:
-        time.sleep(1)
-        os.execl(sys.executable, *([sys.executable]+sys.argv))
-        time.sleep(1)
-    reset = 1
+    z = threading.Thread(target=resets, args=())
+    z.start()
     return render_template('index.html')
 
 @myapp.route("/team", methods=["GET", "POST"])
@@ -68,11 +68,18 @@ def about():
     elif request.method == "GET":
         return render_template("index.html")
 
+def roslaunch():
+    # os.system("rosrun turtlesim turtlesim_node")
+    os.system("rosbag play move_base_WS02_to_WS03.bag")
+
 @socketio.on('message')
 def handleMessage(msg):
     global count
     global df2
     if count == 1:
+        s = threading.Thread(target=roslaunch, args=())
+        s.start()
+        time.sleep(0.5)
         count = 2
         lists = rospy.get_published_topics()
         strlist = []
