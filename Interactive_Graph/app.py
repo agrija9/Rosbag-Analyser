@@ -23,11 +23,12 @@ myapp = Flask(__name__)
 socketio = SocketIO(myapp)
 
 count = 1
+check = False
 df1 = pd.DataFrame(columns = ['Time', 'Topic', 'Message', 'Color'])
 df2 = pd.DataFrame(columns = ['Topic', 'Color'])
 
 def resets():
-    time.sleep(1)
+    time.sleep(0.5)
     python = sys.executable
     os.execl(python, python, * sys.argv)
 
@@ -43,7 +44,7 @@ def team():
 
 @myapp.route("/live", methods=["GET", "POST"])
 def live():
-    x = threading.Thread(target=check_master, args=(False,))
+    x = threading.Thread(target=check_master, args=())
     x.start()
     return render_template('live_visualize.html')
 
@@ -76,26 +77,28 @@ def roslaunch():
 def handleMessage(msg):
     global count
     global df2
-    if count == 1:
-        s = threading.Thread(target=roslaunch, args=())
-        s.start()
-        time.sleep(0.5)
-        count = 2
-        lists = rospy.get_published_topics()
-        strlist = []
-        for i in lists:
-            if i[1] == 'std_msgs/String':
-                strlist.append(i[0])
-        
-        colors = color_gen(len(strlist))
-        random.shuffle(colors)
-        for idx, j in enumerate(strlist):
-            df2 = df2.append({'Topic' : j, 'Color': colors[idx]}, ignore_index=True)
+    if check == False:
+        if count == 1:
+            s = threading.Thread(target=roslaunch, args=())
+            s.start()
+            time.sleep(0.5)
+            count = 2
+            lists = rospy.get_published_topics()
+            strlist = []
+            for i in lists:
+                if i[1] == 'std_msgs/String':
+                    strlist.append(i[0])
+            
+            colors = color_gen(len(strlist))
+            random.shuffle(colors)
+            for idx, j in enumerate(strlist):
+                df2 = df2.append({'Topic' : j, 'Color': colors[idx]}, ignore_index=True)
 
-        df2 = df2.set_index('Topic')
-        y = threading.Thread(target=listener, args=(strlist,))
-        y.start()
-    
+            df2 = df2.set_index('Topic')
+            y = threading.Thread(target=listener, args=(strlist,))
+            y.start()
+    else:
+        print("Roscore is not running. Start roscore and try again")   
     jsonfile =  df1.to_json(orient='records')
     send(jsonfile, broadcast=True)
 
@@ -111,7 +114,8 @@ def listener(strlist):
         rospy.Subscriber(i, String, callback, (i, datetime.now().strftime("%d %m %Y %H:%M:%S %f")))
     rospy.spin()
 
-def check_master(check):
+def check_master():
+    global check
     while check == False:
         try:
             rosgraph.Master('/rostopic').getPid()
