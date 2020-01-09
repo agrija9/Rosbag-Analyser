@@ -17,7 +17,7 @@ Software needed to run this repository:
 
 ### Clone
 
-Clone this repository in you local machine
+Clone this repository in your local machine
 
 ```
 git clone https://github.com/agrija9/Software-Development-Project.git
@@ -34,8 +34,8 @@ pip2 install --user -r requirements.txt
 ## Run
 
 ```
-Open a terminal
-Activate ROS environment
+Open a terminal (ctrl+alt+T)
+ros
 cd Software-Development-Project/
 cd Interactive_graph/
 python3 app.py
