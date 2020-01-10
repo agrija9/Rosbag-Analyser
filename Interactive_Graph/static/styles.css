@@ -30,3 +30,24 @@ font: 12pt verdana;
   color: black;
   box-shadow: 0 0 10px gray;
 }
+
+
+.column1 {
+  border: 2px solid rgb(116, 109, 109);
+  border-radius: 10px;
+  /* Should be removed. Only for demonstration */
+}
+
+.column2 {
+  padding: 10px;
+  margin: 10px;
+
+  /* Should be removed. Only for demonstration */
+}
+
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

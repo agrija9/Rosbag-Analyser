@@ -7,79 +7,12 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-            body, html {
-            height: 100%;
-            line-height: 1.8;
-            }
-
-            .bgimg-1 {
-            background-position: center;
-            background-size: cover;
-            background-image: url("static/linkedin_banner_image_2.png");
-            min-height: 100%;
-            }
-
-            .w3-bar .w3-button {
-            padding: 16px;
-            }
-
-            #dropContainer {
-                border: 5px dashed grey;
-                border-radius: 10px;
-                padding-top: 50px;
-                padding-bottom: 50px;
-            }
-
-            .lds-ring {
-                display: inline-block;
-                position: relative;
-                width: 80px;
-                height: 80px;
-            }
-            .lds-ring div {
-                box-sizing: border-box;
-                display: block;
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                margin: 8px;
-                border: 8px solid grey;
-                border-radius: 50%;
-                animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-                border-color: grey transparent transparent transparent;
-            }
-            .lds-ring div:nth-child(1) {
-                animation-delay: -0.45s;
-            }
-            .lds-ring div:nth-child(2) {
-                animation-delay: -0.3s;
-            }
-            .lds-ring div:nth-child(3) {
-                    animation-delay: -0.15s;
-                }
-                @keyframes lds-ring {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        
-            
-        </style>
+        <link rel="stylesheet" href="/static/indexstyle.css">
     </head>
 
     <body>
-        <!-- Navbar (sit on top) -->
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">             
-            
-            <!-- <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a> -->
-            <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small">
                 
                 <form id="form2" class="w3-bar-item w3-button" align="center" action="/about" method="POST">
@@ -97,13 +30,7 @@
                     <a href='https://github.com/agrija9/Software-Development-Project' class="w3-bar-item fa fa-2x fa-github w3-hover-opacity"></a> 
                 </form>
 
-                <!-- <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a> -->
-                <!-- <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a> -->
-                <!-- <i class="w3-bar-item fa fa-github w3-hover-opacity" align="center"></i> -->
             </div>
-            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
         
             <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
                 <i class="fa fa-bars"></i>
@@ -111,14 +38,8 @@
             </div></div>>
         </div>
 
-        <!-- Header with full-height image -->
         <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-            <!-- div class="w3-display-left w3-text-white" style="padding:48px">
-            %<span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-            <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-            <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-            </div--> 
+
         </header>
 
         <div align="center" >
@@ -150,77 +71,11 @@
             </form>
         </div>
         <p></p>
+        <script src="/static/index_script.js"></script>
 
-        <script>
-
-            function LiveFunction(){
-            }
-
-            async function uploadFunction(){
-                var bagfile =  String(document.getElementById("file_name").value);
-                if (bagfile.substring(bagfile.length - 4, bagfile.length) == ".bag"){
-                    document.getElementById("loader").style.display = "block";
-                    document.getElementById("dropContainer").style.display = "none";
-                    document.getElementById("file_name").style.display = "none";
-                    document.getElementById("btnSubmit").style.display = "none";
-                    document.getElementById("btnSubmit1").style.display = "none";
-                }else{
-                    document.getElementById("btnSubmit").disabled = true;
-                    alert("The visualizer will only accept .bag files!");
-                    await new Promise(resolve => setTimeout(resolve, 100));
-                    document.getElementById("btnSubmit").disabled = false;
-                }
-            }
-
-            dropContainer.ondragover = dropContainer.ondragenter = function(evt) {
-                evt.preventDefault();
-                document.getElementById("filename").innerHTML = 'Drag Here...';
-                document.getElementById("dropContainer").style.border = "5px dashed green";
-                document.getElementById("dropContainer").style.background = "#dbbdba";
-            };
-
-            dropContainer.ondragleave = dropContainer.ondragleave = function(evt) {
-                evt.preventDefault();
-                document.getElementById("filename").innerHTML = 'Drag one or more files to this Drop Zone ...';
-                document.getElementById("dropContainer").style.border = "5px dashed grey";
-                document.getElementById("dropContainer").style.background = "white";
-            };
-
-            dropContainer.ondrop = function(evt) {
-                file_name.files = evt.dataTransfer.files;
-                document.getElementById("filename").innerHTML = file_name.files[0].name;
-                evt.preventDefault();
-            };
-        </script>
-    
-    </body>
-
-    <body>
-        <!-- <p></p>
-            </div>
-            <div align="center" >
-                <form id="form2" class="box_2" align="center" action="/about" method="POST">
-                    <button id="btnAbout" onclick="aboutFunction()" type="submit" class="btn btn-default">About</button>
-                </form>
-            </div>
-        <p></p> -->
-
-        <!-- <script>
-            function aboutFunction() {
-              document.getElementById("btnAbout").style.color = "black";
-            }
-         </script> -->
-         <div style="padding-top: 100px"></div> 
+        <div style="padding-top: 100px"></div> 
 
         <footer class="w3-center w3-black w3-padding-small">
-            <!-- <div class="w3-xlarge w3-section">
-              <i class="fa fa-facebook-official w3-hover-opacity"></i>
-              <i class="fa fa-instagram w3-hover-opacity"></i>
-              <i class="fa fa-snapchat w3-hover-opacity"></i>
-              <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-              <i class="fa fa-twitter w3-hover-opacity"></i>
-              <i class="fa fa-linkedin w3-hover-opacity"></i>
-            </div> -->
             <p>A product of Software Development Project course @ <a href="https://www.h-brs.de/en/inf/study/master/autonomous-systems" title="W3.CSS" target="_blank" class="w3-hover-text-green">H-BRS</a></p>
             <a href="https://github.com/agrija9/Software-Development-Project" class="fa fa-lg fa-github w3-hover-opacity"></a>
           </footer>
