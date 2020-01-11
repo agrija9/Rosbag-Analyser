@@ -14,7 +14,7 @@
         <div id="recording" align = "right" style="display:none"> <img SRC="/static/live.gif" style="width: 10vw; min-width: 33px;"></div>
         <div id="live_func" align = "center">
             <p></p>
-            Roslaunch Command: <input type="text" id="command" name="command" value="roslaunch "><br>
+            Roslaunch Command: <input type="text" id="command" name="command" value="rosbag play move_base_WS02_to_WS03.bag" style="width: 400px;"><br>
             <p></p>
             <button id="LIVE" style="display:block" align="center">LIVE</button>
         </div>
@@ -33,7 +33,7 @@
                 <p></p>
                 <div>
                     <form id="form2" class="box_2" align="center" action="/" method="GET">
-                        <button id="btnHome" style="display:none" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
+                        <button id="btnHome" style="display:block" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
                     </form>
                 </div>
             </div>

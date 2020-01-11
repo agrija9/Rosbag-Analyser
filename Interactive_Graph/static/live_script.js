@@ -8,7 +8,8 @@ $(document).ready(function() {
     var socket = io.connect('http://127.0.0.1:5000');
 
     function _update_time(){
-        socket.send('Data');
+        var launch = document.getElementById("command").value;
+        socket.send(launch);
         if (check_pause == false){
             setTimeout(() => {  
                 _update_time();

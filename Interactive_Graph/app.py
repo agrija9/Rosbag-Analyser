@@ -69,17 +69,18 @@ def about():
     elif request.method == "GET":
         return render_template("index.html")
 
-def roslaunch():
+def roslaunch(msg):
     # os.system("rosrun turtlesim turtlesim_node")
-    os.system("rosbag play move_base_WS02_to_WS03.bag")
+    os.system(msg)
 
 @socketio.on('message')
 def handleMessage(msg):
     global count
     global df2
+    launch = str(msg)
     if check == False:
         if count == 1:
-            s = threading.Thread(target=roslaunch, args=())
+            s = threading.Thread(target=roslaunch, args=(launch,))
             s.start()
             time.sleep(0.5)
             count = 2
