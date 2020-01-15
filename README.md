@@ -16,7 +16,9 @@ Software needed to run this repository:
 
 ### ROS
 
-Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+These are the steps to install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu) in Ubuntu 16.04
+
+
 
 ### Python virtual environment
 
@@ -104,9 +106,3 @@ python3 test_app.py
 ## Contributions
 
 - PEP 8
-
-## TODO
-
-- Travis build
-- GIF in description
-- Add use example (images)
