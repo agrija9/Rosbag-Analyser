@@ -82,13 +82,14 @@ def handleMessage(msg):
         if count == 1:
             s = threading.Thread(target=roslaunch, args=(launch,))
             s.start()
-            time.sleep(0.5)
+            time.sleep(2)
             count = 2
-            lists = rospy.get_published_topics()
             strlist = []
-            for i in lists:
-                if i[1] == 'std_msgs/String':
-                    strlist.append(i[0])
+            while len(strlist) == 0: 
+                lists = rospy.get_published_topics()
+                for i in lists:
+                    if i[1] == 'std_msgs/String':
+                        strlist.append(i[0])
             
             colors = color_gen(len(strlist))
             random.shuffle(colors)
