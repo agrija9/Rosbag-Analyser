@@ -20,38 +20,68 @@ Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ### Python Virtual Environment
 
-Open terminal and write
+Open terminal to install pip and virtual environment
 
 ```
 python3 -m pip install --user --upgrade pip
 python3 -m pip install --user virtualenv
 ```
 
-### Clone
+### Clone repository
 
-Clone this repository in your local machine
+Clone this repository in your computer
 
 ```
 git clone https://github.com/agrija9/Software-Development-Project.git
 ```
 
-### Setup
+### Create and activate python environment
 
-Install packages in home directory (no need of root privileges)
+In main repo folder do
 
 ```
-pip2 install --user -r requirements.txt
+python3 -m venv env
+```
+
+This will create a folder called ```env``` where all the packages required to run this software will be stored.
+
+Activate python environment
+
+```
+source env/bin/activate
+```
+
+### Install requirements
+
+Install packages in environment
+
+```
+pip install -r requirements.txt
 ```
 
 ## Run
 
+Open a terminal and do
+
 ```
-Open a terminal (ctrl+alt+T)
 ros
+roscore
 cd Software-Development-Project/
 cd Interactive_graph/
 python3 app.py
 ```
+
+In another terminal do
+
+```
+cd Software-Development-Project/
+source env/bin/activate
+cd Interactive_graph/
+python3 app.py
+```
+
+After this a local host will be created at ```http://127.0.0.1:5000/```. Go to that page and start using the application in your browser.
+
 
 ## Test
 
