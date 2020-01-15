@@ -16,9 +16,7 @@ Software needed to run this repository:
 
 ### ROS
 
-These are the steps to install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu) in Ubuntu 16.04
-
-
+Follow the steps from 1 to 1.7 in this tutorial to install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu) in Ubuntu 16.04.
 
 ### Python virtual environment
 
