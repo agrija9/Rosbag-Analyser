@@ -35,7 +35,7 @@ Clone this repository in your computer
 git clone https://github.com/agrija9/Software-Development-Project.git
 ```
 
-Install requirements. First create a python environment in main folder
+Create a python environment in main folder
 
 ```
 cd /Software-Development-Project
@@ -50,7 +50,7 @@ Now activate python environment
 source env/bin/activate
 ```
 
-Install packages in environment
+Install requirements in python environment
 
 ```
 pip install -r requirements.txt
