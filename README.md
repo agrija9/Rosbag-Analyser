@@ -63,9 +63,6 @@ Open a terminal and do
 ```
 ros
 roscore
-cd Software-Development-Project/
-cd Interactive_graph/
-python3 app.py
 ```
 
 In another terminal do
@@ -77,7 +74,7 @@ cd Interactive_graph/
 python3 app.py
 ```
 
-After this a local host will be created at ```http://127.0.0.1:5000/```. Go to that page and start using the application in your browser.
+After this, a local host will be created at ```http://127.0.0.1:5000/```. Go to that page and start using the application in your browser.
 
 
 ## Test
