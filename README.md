@@ -18,7 +18,7 @@ Software needed to run this repository:
 
 Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
-### Python Virtual Environment
+### Python virtual environment
 
 Open terminal to install pip and virtual environment
 
