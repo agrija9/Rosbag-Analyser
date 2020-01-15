@@ -1,7 +1,7 @@
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Build Status](https://travis-ci.org/agrija9/Software-Development-Project.svg?branch=master)](https://travis-ci.org/agrija9/Software-Development-Project)
 
-# Post-mortem Analysis of ROS Bag File
+# Post-mortem Analysis of a ROS Bag File
 
 This tool plots the topics of a RosBag file as a timeline. The timeline graph runs as an interactive web application that allows to select topics at ease and shows their corresponding messages and timestamps.
 
@@ -11,9 +11,21 @@ Software needed to run this repository:
 
 - [Ubuntu 16.04](https://ubuntu.com/download/desktop)
 - Python 2.7 / 3.6
-- [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
 ## Installation
+
+### ROS
+
+Install [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+
+### Python Virtual Environment
+
+Open terminal and write
+
+```
+python3 -m pip install --user --upgrade pip
+python3 -m pip install --user virtualenv
+```
 
 ### Clone
 
