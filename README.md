@@ -27,7 +27,7 @@ python3 -m pip install --user --upgrade pip
 python3 -m pip install --user virtualenv
 ```
 
-### Clone repository
+### Clone repository and install requirements
 
 Clone this repository in your computer
 
@@ -35,23 +35,20 @@ Clone this repository in your computer
 git clone https://github.com/agrija9/Software-Development-Project.git
 ```
 
-### Create and activate python environment
-
-In main repo folder do
+Install requirements. First create a python environment in main folder
 
 ```
+cd /Software-Development-Project
 python3 -m venv env
 ```
 
 This will create a folder called ```env``` where all the packages required to run this software will be stored.
 
-Activate python environment
+Now activate python environment 
 
 ```
 source env/bin/activate
 ```
-
-### Install requirements
 
 Install packages in environment
 
