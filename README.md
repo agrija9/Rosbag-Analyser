@@ -74,7 +74,9 @@ cd src/
 python3 app.py
 ```
 
-After this, a local host will be created at ```http://127.0.0.1:5000/```. Go to that page and start using the application in your browser.
+After this, you should see a message in terminal saying ```Failed to load Python extension for LZ4 support. LZ4 compression will not be available.```. This means that the application is running properly. 
+
+A local host has been created at ```http://127.0.0.1:5000/```. Go to that page in your browser and start using the application.
 
 
 ## Test
