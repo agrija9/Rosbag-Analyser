@@ -43,7 +43,7 @@ git clone https://github.com/agrija9/Software-Development-Project.git
 Create a python environment in main folder
 
 ```
-cd Software-Development-Project/
+cd Rosbag-Analyser/
 python3 -m venv env
 ```
 
