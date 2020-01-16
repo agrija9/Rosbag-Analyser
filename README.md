@@ -24,7 +24,8 @@ Open terminal to install pip and virtual environment
 
 ```
 python3 -m pip install --user --upgrade pip
-python3 -m pip install --user virtualenv
+python3 -m pip install --user virtualenv (outdated)
+sudo apt-get install python3-venv
 ```
 
 ### Clone repository and install requirements
@@ -38,7 +39,7 @@ git clone https://github.com/agrija9/Software-Development-Project.git
 Create a python environment in main folder
 
 ```
-cd /Software-Development-Project
+cd Software-Development-Project/
 python3 -m venv env
 ```
 
@@ -61,7 +62,7 @@ pip install -r requirements.txt
 Open a terminal and do
 
 ```
-ros
+ros (outdated)
 roscore
 ```
 
