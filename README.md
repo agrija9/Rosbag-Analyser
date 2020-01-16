@@ -4,6 +4,9 @@
 # Post-mortem/Live Analysis of a ROS Bag File
 
 This tool plots the topics of a RosBag file as a timeline. The timeline graph runs as an interactive web application that allows to select topics at ease and shows their corresponding messages and timestamps.
+![Live Visualization](data/live.gif)
+![Upload File Visualization ](data/upload.gif)
+
 
 ## Prerequisites
 
