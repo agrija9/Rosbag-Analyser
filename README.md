@@ -6,12 +6,11 @@
 This tool plots the topics of a RosBag file as a timeline. The timeline graph runs as an interactive web application that allows to select topics at ease and shows their corresponding messages and timestamps.
 
 <p align="center">
-  <b>Some Links:</b><br>
-  <a href="#">Link 1</a> |
-  <a href="#">Link 2</a> |
-  <a href="#">Link 3</a>
-  <br><br>
+  <b>This is the look of the Live Visualizer</b>
   <img src="data/live.gif">
+  <br><br>
+  <b>This shows the filtering of rostopics in the graph</b>
+  <img src="data/upload.gif">
 </p>
 <p align="center">
 ![Upload File Visualization](data/upload.gif)
