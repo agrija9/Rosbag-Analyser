@@ -1,12 +1,15 @@
 from app import myapp
-from utils import bag_content, bag_info
+from utils import *
 import json
 import unittest
 import pandas as pd
 from pandas.util.testing import assert_frame_equal
 import rosbag
+import ast
 
 # set our application to testing mode
+print("STARTING TESTING MODULE...")
+print("--------------------------")
 print("Imported modules correctly...")
 myapp.testing = True
 
@@ -26,17 +29,16 @@ class TestApp(unittest.TestCase):
     def setUp(self):
         # creates a test client
         self.app = myapp.test_client()
-
         # propagate the exceptions to the test client
         self.app.testing = True
 
     def test_home_status_code(self):
         # sends HTTP GET request to the application on the specified path
-        result = self.app.get('/')
-
+        # result = self.app.get('/')
         # assert the status code of the response
-        self.assertEqual(result.status_code, 200)
-        print("...passed test_home_status_code()")
+        # self.assertEqual(result.status_code, 200)
+        # print("passed test_home_status_code()")
+        pass
 
     def test_upload_template(self):
         # result = self.app.get('/upload')
@@ -44,14 +46,37 @@ class TestApp(unittest.TestCase):
         # print("assert template passed!")
         # self.assert_context("greeting", "hello")
         pass
+    
+    def test_bag_info(self):
+        pass
+    
+    def test_bag_content(self):
+        """
+        To test that bag_content in utils is returning a json with the desired keys
+        """
+        expected_dict = {"Time":[], "Topic":[], "Message":[], "Color":[]}
+        expected_dict_json = json.dumps(expected_dict)
 
-    # util methods
-    def test_bag_pandas_df(self):
-        target_df = pd.DataFrame(columns = ['Topic', 'Color', 'Message', 'Count', 'Connections', 'Frequency'])
-        bag = rosbag.Bag("./data/turtle_simulation.bag")
-        obtained_df = bag_info(bag)
-        # obtained_df = obtained_df.set_index("Topic") 
-        assert_frame_equal(obtained_df, target_df, check_dtype=False)
+        bag = rosbag.Bag("../data/move_base_WS02_to_WS03.bag")
+        df = bag_info(bag)
+        jsonfile = bag_content(bag, df) # this returns a string representation of a dictionary, hence the conversion
+        jsonfile = json.loads(jsonfile)
+        jsonfile_compare = jsonfile[0]
+
+        # compare json keys and check they are the same
+        # def compare_keys(json1, json2):
+            # return json1.keys() == json2.keys()
+        
+        K2 = jsonfile_compare.keys() == expected_dict.keys()
+
+        self.assertEqual(K2, True)
+
+    def test_color_gen(self):
+        """
+        To test lenght of returned array that contains the color information of topics in timeline
+        """
+        color_array = color_gen(10)
+        self.assertEqual(len(color_array), 10)
 
 
 if __name__ == "__main__":
