@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rosbag Analyzer</title>
+        <script type="text/javascript" src="/static/vis.js"></script>
+        <link href="/static/visstyle.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/static/styles.css">
+        <script type="text/javascript">var jsonfile = '{{ jsonfile|tojson|safe }}';</script>
+        <script type="text/javascript" src="/static/SDP_script.js"></script>
+    </head>
+
+    <body>
+        <h1 align="center">ROSBAG READER</h1>
+        <div align = "center">
+            <p></p>
+        </div>
+        <p></p>
+        <div class="column1" id="topicsLabel" style="display:none">
+            <div class="column2">
+                <h1 align = "center">VISUALIZER</h1>
+                <div id="visualization" style="display:none"></div>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="column">
+                <p id="legendText" style="display:none">Legends :</p>
+                <div id="legend"></div>
+                <p></p>
+                <div>
+                    <form id="form2" class="box_2" align="center" action="/" method="GET">
+                        <button id="btnHome" style="display:none" onclick="homeFunction()" type="submit" class="btn btn-default">Home</button>
+                    </form>
+                </div>
+            </div>
+            <div class="column">
+                <p id="selectTopics" style="display:none">Select Topics :  <input type="checkbox" checked=true id="selectall" onclick="selectAll()"><label for="checkTopic"> Select All</label></p>
+                <div id="container"></div>
+                <p></p>
+                <div>
+                    <button id="UpdateButton" style="display:none" align="center" onclick="updateGraph()">Update Graph</button>
+                </div>
+            </div>
+        </div>
+        <p></p>
+
+    </body>
+</html>

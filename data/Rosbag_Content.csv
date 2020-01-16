@@ -1,0 +1,21 @@
+Time,Topic,Message,Color
+"Thu, 17 Oct 2019 19:37:15 200932532",/mir_perception/barrier_tape_detection/event_in,e_start,darkorchid
+"Thu, 17 Oct 2019 19:37:15 201870106",/arm_moveit_client/event_in,e_start,darkseagreen
+"Thu, 17 Oct 2019 19:37:15 202800062",/arm_moveit_client/target_string_pose,barrier_tape,green
+"Thu, 17 Oct 2019 19:37:15 208362425",/mcr_common/dynamic_reconfigure_client/configuration_name,dbc_move_base,chocolate
+"Thu, 17 Oct 2019 19:37:15 208563410",/mcr_common/dynamic_reconfigure_client/event_in,e_start,honeydew
+"Thu, 17 Oct 2019 19:37:15 427802874",/arm_moveit_client/event_out,e_success,darkturquoise
+"Thu, 17 Oct 2019 19:37:15 429710298",/mcr_common/dynamic_reconfigure_client/event_out,e_success,hotpink
+"Thu, 17 Oct 2019 19:37:15 511917956",/move_base_wrapper/event_in,e_start,lightyellow
+"Thu, 17 Oct 2019 19:37:15 512206113",/mcr_common/twist_to_motion_direction_conversion/event_in,e_start,grey
+"Thu, 17 Oct 2019 19:37:15 512942012",/mir_manipulation/look_at_point/event_in,e_start,mediumaquamarine
+"Thu, 17 Oct 2019 19:37:17 925352653",/move_base/force_field_recovery/obstacle_cloud,ÍÌ¬?…ëÑ>,lightskyblue
+"Thu, 17 Oct 2019 19:37:29 722595170",/move_base_wrapper/event_out,e_success,palegreen
+"Thu, 17 Oct 2019 19:37:29 741286368",/arm_moveit_client/event_in,e_start,darkseagreen
+"Thu, 17 Oct 2019 19:37:29 744028655",/arm_moveit_client/target_string_pose,look_at_workspace_from_far,green
+"Thu, 17 Oct 2019 19:37:29 748217695",/mcr_navigation/direct_base_controller/coordinator/event_in,e_start,ghostwhite
+"Thu, 17 Oct 2019 19:37:29 748490566",/mir_manipulation/look_at_point/event_in,e_stop,mediumaquamarine
+"Thu, 17 Oct 2019 19:37:32 437411995",/arm_moveit_client/event_out,e_success,darkturquoise
+"Thu, 17 Oct 2019 19:37:34 751868690",/mcr_navigation/direct_base_controller/coordinator/event_in,e_stop,ghostwhite
+"Thu, 17 Oct 2019 19:37:34 787938239",/mcr_navigation/direct_base_controller/coordinator/event_out,e_stopped,beige
+"Thu, 17 Oct 2019 19:37:34 808032403",/mir_perception/barrier_tape_detection/event_in,e_stop,darkorchid

@@ -1,0 +1,53 @@
+body,
+input {
+font: 12pt verdana;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 2px solid;
+}
+
+/* our custom classes overrule the styles for selected events,
+    so lets define a new style for the selected events */
+.vis-item.vis-selected {
+  background-color: white;
+  border-color: black;
+  color: black;
+  box-shadow: 0 0 10px gray;
+}
+
+
+.column1 {
+  border: 2px solid rgb(116, 109, 109);
+  border-radius: 10px;
+  /* Should be removed. Only for demonstration */
+}
+
+.column2 {
+  padding: 10px;
+  margin: 10px;
+
+  /* Should be removed. Only for demonstration */
+}
+
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
