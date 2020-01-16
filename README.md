@@ -70,7 +70,7 @@ In another terminal do
 ```
 cd Software-Development-Project/
 source env/bin/activate
-cd Interactive_graph/
+cd src/
 python3 app.py
 ```
 
