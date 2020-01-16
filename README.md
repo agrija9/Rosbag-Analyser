@@ -38,7 +38,6 @@ Open terminal to install pip and virtual environment
 
 ```
 python3 -m pip install --user --upgrade pip
-python3 -m pip install --user virtualenv (outdated)
 sudo apt-get install python3-venv
 ```
 
@@ -83,7 +82,7 @@ roscore
 In another terminal do
 
 ```
-cd Software-Development-Project/
+cd Rosbag-Analyser/
 source env/bin/activate
 cd src/
 python3 app.py
