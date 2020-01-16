@@ -15,6 +15,7 @@ Software needed to run this repository:
 ## Installation
 
 **Note 1:** If you have a default Anaconda environment sourced when opening a terminal, you must deactivate it by doing ```conda deactivate``` in terminal. 
+
 **Note 2:** To use this application you **must** install ROS in your system. 
 
 ### ROS
