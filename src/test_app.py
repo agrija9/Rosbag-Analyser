@@ -3,7 +3,6 @@ from utils import *
 import json
 import unittest
 import pandas as pd
-from pandas.util.testing import assert_frame_equal
 import rosbag
 import ast
 
@@ -37,27 +36,36 @@ class TestApp(unittest.TestCase):
         # result = self.app.get('/')
         # assert the status code of the response
         # self.assertEqual(result.status_code, 200)
-        # print("passed test_home_status_code()")
         pass
 
     def test_upload_template(self):
         # result = self.app.get('/upload')
         # self.assertEqual(result ,"SDP_visualize.html")
-        # print("assert template passed!")
-        # self.assert_context("greeting", "hello")
-        pass
-    
+        pass 
+
     def test_bag_info(self):
-        pass
+        try:
+            bag = rosbag.Bag("../data/move_base_WS02_to_WS03.bag")
+        except IOError:
+            print("Could not find bag file")
+        
+        df = bag_info(bag)
+        df_baseline = pd.DataFrame(columns = ['Color', 'Message', 'Count', 'Connections', 'Frequency'])
+        # pd.testing.assert_frame_equal(df, df_baseline)
+        self.assertEqual(len(df.columns.intersection(df_baseline.columns)), 5)
     
     def test_bag_content(self):
         """
         To test that bag_content in utils is returning a json with the desired keys
         """
         expected_dict = {"Time":[], "Topic":[], "Message":[], "Color":[]}
-        expected_dict_json = json.dumps(expected_dict)
-
-        bag = rosbag.Bag("../data/move_base_WS02_to_WS03.bag")
+        # expected_dict_json = json.dumps(expected_dict)
+        
+        try:
+            bag = rosbag.Bag("../data/move_base_WS02_to_WS03.bag")
+        except IOError:
+            print("Can not open bag file")
+        
         df = bag_info(bag)
         jsonfile = bag_content(bag, df) # this returns a string representation of a dictionary, hence the conversion
         jsonfile = json.loads(jsonfile)
