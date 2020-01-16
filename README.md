@@ -7,10 +7,10 @@ This tool plots the topics of a RosBag file as a timeline. The timeline graph ru
 
 <p align="center">
   <br><br>
-  <img src="data/live.gif">
+  <img src="data/live.gif"><br>
   <b>This is the look of the Live Visualizer</b>
   <br><br>
-  <img src="data/upload.gif">
+  <img src="data/upload.gif"><br>
   <b>This shows the filtering of rostopics in the graph</b>
 </p>
 
