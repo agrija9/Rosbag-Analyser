@@ -110,7 +110,7 @@ A local host has been created at ```http://127.0.0.1:5000/```. Go to that page i
 
 ## Test
 
-For unit testing run
+For unit testing open a terminal and do
 
 ```
 cd Rosbag-Analyser/
