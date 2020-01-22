@@ -7,13 +7,24 @@ Rosbag Analyser is a tool that allows users to visualize the topics of a rosbag 
 
 This application has a post-mortem and live visualization mode. Users can interact with the timeline by selecting/filtering topics at ease and see their corresponding messages and time stamps
 
-## Rosbag Live Visualizer 
+## Rosbag Live Visualizer mode
 
 <p align="center">
   <br><br>
   <img src="data/live.gif"><br>
   <!--b>This is the look of the Live Visualizer</b!-->
-  <br><br><br><br><br><br>
+  <!--br><br><br><br><br><br>
+  <img src="data/upload.gif"><br>
+  <b>This shows the filtering of rostopics in the graph</b!-->
+</p>
+
+## Filtering or rostopics in the timeline
+
+<p align="center">
+  <br><br>
+  <!--img src="data/live.gif"><br!-->
+  <!--b>This is the look of the Live Visualizer</b!-->
+  <!--br><br><br><br><br><br!-->
   <img src="data/upload.gif"><br>
   <b>This shows the filtering of rostopics in the graph</b>
 </p>
