@@ -4,7 +4,7 @@ sys.path.append("../")
 # import myapp
 # from ..src.app import myapp
 from src.app import myapp
-from utils.utils import bag_content, bag_info, color_gen, convert_time
+from src.utils import bag_content, bag_info, color_gen, convert_time
 import json
 import unittest
 import pandas as pd
@@ -22,7 +22,7 @@ class TestApp(unittest.TestCase):
     """
     This class uses unittest module.
     Performs unit tests for the functionality in app.py.
-    Run tests on terminal: python -m unittest test_app.
+    Run tests on terminal: python3 -m unittest test_app.py
     """
 
     @classmethod
