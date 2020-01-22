@@ -61,7 +61,7 @@ sudo apt-get install python3-venv
 Clone this repository in your computer
 
 ```
-git clone https://github.com/agrija9/Software-Development-Project.git
+git clone https://github.com/agrija9/Rosbag-Analyser.git
 ```
 
 Create a python environment in main folder
@@ -90,7 +90,7 @@ pip install -r requirements.txt
 Open a terminal and do
 
 ```
-ros (outdated)
+ros (in case ros is not sourced when opening the terminal)
 roscore
 ```
 
