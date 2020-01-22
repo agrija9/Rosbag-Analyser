@@ -3,12 +3,16 @@
 
 # Post-mortem/Live Analysis of a ROS Bag File
 
-This tool plots the topics of a RosBag file as a timeline. The timeline graph runs as an interactive web application that allows to select topics at ease and shows their corresponding messages and timestamps.
+Rosbag Analyser is a tool that allows users to visualize the topics of a rosbag file as an interactive timeline. 
+
+This application has a post-mortem and live visualization mode. Users can interact with the timeline by selecting/filtering topics at ease and see their corresponding messages and time stamps
+
+## Rosbag Live Visualizer 
 
 <p align="center">
   <br><br>
   <img src="data/live.gif"><br>
-  <b>This is the look of the Live Visualizer</b>
+  <!--b>This is the look of the Live Visualizer</b!-->
   <br><br><br><br><br><br>
   <img src="data/upload.gif"><br>
   <b>This shows the filtering of rostopics in the graph</b>
