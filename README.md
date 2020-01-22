@@ -18,7 +18,7 @@ This application has a post-mortem and live visualization mode. Users can intera
   <b>This shows the filtering of rostopics in the graph</b!-->
 </p>
 
-## Filtering or rostopics in the timeline
+## Filtering of rostopics in the timeline
 
 <p align="center">
   <br><br>
@@ -113,6 +113,9 @@ A local host has been created at ```http://127.0.0.1:5000/```. Go to that page i
 For unit testing run
 
 ```
+cd Rosbag-Analyser/
+source env/bin/activate
+cd src/
 python3 test_app.py
 ```
 
@@ -120,6 +123,9 @@ python3 test_app.py
 
 * [Flask](https://www.palletsprojects.com/p/flask/) - Web framework
 * [visjs](https://visjs.org/) - Interactive timeline in browser
+* Pandas
+* Pyrosbag
+* Flask-SocketIO
 
 ##  Authors 
 
